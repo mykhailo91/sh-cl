@@ -1,0 +1,43 @@
+footer {
+  padding: 64px;
+  background-color: #000;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px;
+  }
+
+  .logo {
+    margin-bottom: 12px;
+
+    @media screen and (max-width: 768px) {
+      height: 24px;
+    }
+  }
+
+  .copy {
+    color: #767676;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+    }
+  }
+}
+
+.powered-by-zendesk {
+  display: none;
+}

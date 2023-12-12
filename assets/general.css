@@ -1,0 +1,49 @@
+.home-container {
+  background-color: white;
+
+  .content-container {
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.section-container {
+  width: 100%;
+  padding: 64px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 32px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.396px;
+  }
+
+  .section-description {
+    color: #333;
+  }
+}
+
+.subtitle1 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.45px;
+}
+
+.body2 {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+}
+
+.semi-bold {
+  font-weight: 600;
+}

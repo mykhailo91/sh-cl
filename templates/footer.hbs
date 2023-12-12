@@ -1,143 +1,72 @@
-</div>
-<div class="wrapper-footer">
-  <footer class="footer">
-    <div class="container footer-wrapper">
-      <div class="flex flex-col justify-center text-center items-center">
-        <div class="social-col mb-6 space-x-8">
-          {{#is settings.facebook_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'facebook_url'}}{{else}}{{settings.facebook_url}}{{/if}}"
-            target="_blank" class="footer-social-link fa fa-facebook"></a>
-          {{/is}}
-          {{#is settings.youtube_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'youtube_url'}}{{else}}{{settings.youtube_url}}{{/if}}"
-            target="_blank" class="footer-social-link fab fa-youtube"></a>
-          {{/is}}
-          {{#is settings.instagram_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'instagram_url'}}{{else}}{{settings.instagram_url}}{{/if}}"
-            target="_blank" class="footer-social-link fab fa-instagram"></a>
-          {{/is}}
-          {{#is settings.twitter_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'twitter_url'}}{{else}}{{settings.twitter_url}}{{/if}}"
-            target="_blank" class="footer-social-link fab fa-twitter"></a>
-          {{/is}}
-          {{#is settings.pinterest_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'pinterest_url'}}{{else}}{{settings.pinterest_url}}{{/if}}"
-            target="_blank" class="footer-social-link fa fa-pinterest"></a>
-          {{/is}}
-          {{#is settings.tiktok_url ''}}{{else}}
-          <a href="{{#if settings.dc_toggle}}{{dc 'tiktok_url'}}{{else}}{{settings.tiktok_url}}{{/if}}"
-            target="_blank" class="footer-social-link fab fa-tiktok"></a>
-          {{/is}}
-        </div>
-        <p class="text-lg">
-          {{#is settings.footer_url_link_1 ''}}{{else}}
-          <a href="{{settings.footer_url_link_1}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_1'}}{{else}}{{settings.footer_url_title_1}}{{/if}}</a>
-          |
-          {{/is}}
-          {{#is settings.footer_url_link_2 ''}}{{else}}
-          <a href="{{settings.footer_url_link_2}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_2'}}{{else}}{{settings.footer_url_title_2}}{{/if}}</a>
-          |
-          {{/is}}
-          {{#is settings.footer_url_link_3 ''}}{{else}}
-          <a target="_blank" href="{{settings.footer_url_link_3}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_3'}}{{else}}{{settings.footer_url_title_3}}{{/if}}</a>
-          |
-          {{/is}}
-          {{#is settings.footer_url_link_4 ''}}{{else}}
-          <a href="{{settings.footer_url_link_4}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_4'}}{{else}}{{settings.footer_url_title_4}}{{/if}}</a>
-          |
-          {{/is}}
-          {{#is settings.footer_url_link_5 ''}}{{else}}
-          <a href="{{settings.footer_url_link_5}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_5'}}{{else}}{{settings.footer_url_title_5}}{{/if}}</a>
-          {{/is}}
-          <br>
-          {{#if settings.toggle_footer_copyright}}        
-          {{settings.footer_copyright}}
-          {{/if}}
-          {{#if settings.toggle_copyright_link}}
-          <a href="{{settings.copyright_link_url}}">{{#if settings.dc_toggle}}{{dc 'copyright_link_title'}}{{else}}{{settings.copyright_link_title}}{{/if}}</a>
-          {{/if}}
-        </p>
-        <a target="_blank" href="https://www.bbb.org/us/ma/needham/profile/wholesale-small-appliances/sharkninja-0021-119951#bbbonlineclick">
-          <img src="{{asset 'bbb.png'}}" class="text-center" width="100" alt="">
-        </a>
-      </div>
-      {{!-- <div class="row d-flex">
-        <div class="footer-col copyrights col col-sm-7 col-md-8">
-          {{#link 'help_center'}}
-          <img class="mobile-logo" src="{{settings.footer_logo}}" alt="{{t 'logo'}}">
-          {{/link}}
-          <div class="footer-logo">
-            {{#link 'help_center'}}
-            <img src="{{settings.footer_logo}}" alt="{{t 'logo'}}">
-            {{/link}}
-          </div>
-          <div class="copyrights-col">
-            <p>
-              {{#if settings.dc_toggle}}
-              {{dc'footer_copyright'}}
-              {{else}}
-              {{settings.footer_copyright}}
-              {{/if}}
-            </p>
-          </div>
+<footer>
+  <img class="logo" src="{{asset 'shark-logo.svg'}}" alt="shark-logo"/>
+  <p class="copy">© 2024 SharkClean. All rights reserved.</p>
+  <div class="social">
+    {{#is settings.facebook_url ''}}
+    {{else}}
+      <a href="
+        {{#if settings.dc_toggle}}
+          {{dc 'facebook_url'}}
+        {{else}}
+          {{settings.facebook_url}}
+        {{/if}}
+        "target="_blank" class="social-link">
+          <img src="{{asset 'facebook-fill.svg'}}" alt="facebook-icon"/>
+      </a>
+    {{/is}}
+    {{#is settings.youtube_url ''}}
+    {{else}}
+      <a href="
+        {{#if settings.dc_toggle}}
+          {{dc 'youtube_url'}}
+        {{else}}
+          {{settings.youtube_url}}
+        {{/if}}"
+        target="_blank" class="social-link">
+          <img src="{{asset 'youtube-fill.svg'}}" alt="youtube-icon"/>
+      </a>
+    {{/is}}
+    {{#is settings.instagram_url ''}}
+    {{else}}
+      <a href="
+        {{#if settings.dc_toggle}}
+          {{dc 'instagram_url'}}
+        {{else}}
+          {{settings.instagram_url}}
+        {{/if}}"
+        target="_blank" class="social-link">
+          <img src="{{asset 'instagram-fill.svg'}}" alt="instagram-icon"/>
+      </a>
+    {{/is}}
+    {{#is settings.twitter_url ''}}
+    {{else}}
+      <a href="
+        {{#if settings.dc_toggle}}
+          {{dc 'twitter_url'}}
+        {{else}}
+          {{settings.twitter_url}}
+        {{/if}}"
+        target="_blank" class="social-link">
+          <img src="{{asset 'twiter-fill.svg'}}" alt="twitter-icon"/>
+      </a>
+    {{/is}}
+    {{#is settings.pinterest_url ''}}
+    {{else}}
+      <a href="
+        {{#if settings.dc_toggle}}
+          {{dc 'pinterest_url'}}
+        {{else}}
+          {{settings.pinterest_url}}
+        {{/if}}"
+        target="_blank" class="social-link">
+          <img src="{{asset 'pariscope-fill.svg'}}" alt="pinterest-icon"/>
+      </a>
+    {{/is}}
+  </div>
+</footer>
 
-          {{#if alternative_locales}}
-          <div class="dropdown language-dropdown" aria-haspopup="true">
-            <a class="dropdown-toggle btn btn-footer">
-              {{current_locale.name}}
-            </a>
-            <span class="dropdown-menu dropdown-menu-top dropdown-footer" role="menu">
-              {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
-              {{/each}}
-            </span>
-          </div>
-          {{/if}}
-        </div>
-        <div class="footer-col footer-col-social-links col col-sm-5 col-md-4">
-          <div class="custom-link-col">
-            {{#if settings.toggle_footer_url_1}}<a
-              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_1'}}{{else}}{{settings.footer_url_link_1}}{{/if}}"
-              class="custom-link">{{#if
-              settings.dc_toggle}}{{dc'footer_url_title_1'}}{{else}}{{settings.footer_url_title_1}}{{/if}}</a>{{/if}}
-            {{#if settings.toggle_footer_url_2}}<a
-              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_2'}}{{else}}{{settings.footer_url_link_2}}{{/if}}"
-              class="custom-link">{{#if
-              settings.dc_toggle}}{{dc'footer_url_title_2'}}{{else}}{{settings.footer_url_title_2}}{{/if}}</a>{{/if}}
-            {{#if settings.toggle_footer_url_3}}<a
-              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_3'}}{{else}}{{settings.footer_url_link_3}}{{/if}}"
-              class="custom-link">{{#if
-              settings.dc_toggle}}{{dc'footer_url_title_3'}}{{else}}{{settings.footer_url_title_3}}{{/if}}</a>{{/if}}
-          </div>
-          <div class="social-col">
-            {{#if settings.toggle_facebook_icon}}
-            <a href="{{#if settings.dc_toggle}}{{dc 'facebook_url'}}{{else}}{{settings.facebook_url}}{{/if}}"
-              target="_blank" class="footer-social-link fab fa-facebook"></a>
-            {{/if}}
-            {{#if settings.toggle_twitter_icon}}
-            <a href="{{#if settings.dc_toggle}}{{dc 'twitter_url'}}{{else}}{{settings.twitter_url}}{{/if}}"
-              target="_blank" class="footer-social-link fab fa-twitter"></a>
-            {{/if}}
-            {{#if settings.toggle_youtube_icon}}
-            <a href="{{#if settings.dc_toggle}}{{dc 'youtube_url'}}{{else}}{{settings.youtube_url}}{{/if}}"
-              target="_blank" class="footer-social-link fab fa-youtube"></a>
-            {{/if}}
-            {{#if settings.toggle_pinterest_icon}}
-            <a href="{{#if settings.dc_toggle}}{{dc 'pinterest_url'}}{{else}}{{settings.pinterest_url}}{{/if}}"
-              target="_blank" class="footer-social-link fab fa-pinterest"></a>
-            {{/if}}
-            {{#if settings.toggle_instagram_icon}}
-            <a href="{{#if settings.dc_toggle}}{{dc 'instagram_url'}}{{else}}{{settings.instagram_url}}{{/if}}"
-              target="_blank" class="footer-social-link fab fa-instagram"></a>
-            {{/if}}
-          </div>
-        </div>
-      </div> --}}
-    </div>
-  </footer>
-</div>
-</div>
-
-<button class="back-to-top fa fa-angle-up" data-back-to-top></button>
+<button class="back-to-top" data-back-to-top>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M16.0002 27.7503C15.8012 27.7503 15.6105 27.6713 15.4698 27.5306C15.3292 27.39 15.2502 27.1992 15.2502 27.0003L15.2502 6.81157L7.53015 14.5303C7.46149 14.604 7.37869 14.6631 7.28669 14.7041C7.19469 14.7451 7.09538 14.7671 6.99467 14.7689C6.89397 14.7707 6.79394 14.7522 6.70056 14.7144C6.60717 14.6767 6.52233 14.6206 6.45111 14.5494C6.3799 14.4781 6.32375 14.3933 6.28603 14.2999C6.24831 14.2065 6.22978 14.1065 6.23156 14.0058C6.23334 13.9051 6.25538 13.8058 6.29637 13.7138C6.33736 13.6218 6.39646 13.539 6.47015 13.4703L15.4702 4.47032C15.6108 4.32987 15.8014 4.25098 16.0002 4.25098C16.1989 4.25098 16.3895 4.32987 16.5302 4.47032L25.5302 13.4703C25.6626 13.6125 25.7348 13.8005 25.7313 13.9948C25.7279 14.1891 25.6492 14.3745 25.5118 14.5119C25.3744 14.6494 25.189 14.7281 24.9947 14.7315C24.8004 14.7349 24.6123 14.6628 24.4702 14.5303L16.7502 6.81157L16.7502 27.0003C16.7502 27.1992 16.6711 27.39 16.5305 27.5306C16.3898 27.6713 16.1991 27.7503 16.0002 27.7503Z" fill="black"/>
+    </svg>
+</button>

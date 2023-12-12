@@ -7,6 +7,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{#if settings.info_notification_toggle}}
+  <meta name="theme-color" content="{{settings.info_notification_bg_color}}" />
+{{/if}}
+
 {{#is settings.body_font_family "'Open Sans', sans-serif"}}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i"
         rel="stylesheet">
@@ -55,6 +60,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="{{asset 'owl.carousel.min.css'}}">
 <link rel="stylesheet" href="{{asset 'owl.theme.default.min.css'}}">
+
+{{!-- assets styling files --}}
+<link rel="stylesheet" href="{{asset 'general.css'}}">
+<link rel="stylesheet" href="{{asset 'modal.css'}}">
+<link rel="stylesheet" href="{{asset 'footer.css'}}">
+<link rel="stylesheet" href="{{asset 'articles.css'}}">
+<link rel="stylesheet" href="{{asset 'contact-banner.css'}}">
+<link rel="stylesheet" href="{{asset 'priority-categories.css'}}">
+<link rel="stylesheet" href="{{asset 'general-topic.css'}}">
+<link rel="stylesheet" href="{{asset 'back-to-top.css'}}">
+<link rel="stylesheet" href="{{asset 'hero-search.css'}}">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.magnific-popup/1.0.0/jquery.magnific-popup.min.js"></script>

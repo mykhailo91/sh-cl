@@ -1,0 +1,65 @@
+.general-topics,
+.general-topic {
+    display: flex;
+}
+
+.general-topics {
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 40px;
+    margin-top: -44px;
+    z-index: 1;
+    position: relative;
+}
+
+.general-topic {
+    background-color: #fff;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+    width: 100%;
+}
+.general-topic:hover {
+    box-shadow: 0px 20px 28px 0px rgba(0, 0, 0, 0.15);
+}
+.general-topic h4 {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+.general-topic__icon {
+    width: 32px;
+    height: 32px;
+}
+.general-topic__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 767.98px) {
+    .general-topics {
+        flex-direction: column;
+        gap: unset;
+        padding: 0 24px 24px;
+    }
+    .general-topic {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+    .general-topic:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    .general-topic__action {
+        position: absolute;
+        right: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .general-topics {
+        padding: 0;
+    }
+}

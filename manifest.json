@@ -1,7 +1,7 @@
 {
   "name": "Shark US - 20231123 (New Robot Section)",
   "author": "Solafid Solutions",
-  "version": "1.2.7",
+  "version": "1.2.6",
   "api_version": 2,
   "settings": [
     {
@@ -19,7 +19,7 @@
           "type": "text",
           "description": "Text for search placeholder",
           "label": "Search placeholder",
-          "value": "Search by item or model #"
+          "value": "Search by device model or topic"
         }
       ]
     },
@@ -78,14 +78,14 @@
           "type": "color",
           "description": "Background color of your Help Center",
           "label": "Background color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(242, 242, 242, 1)"
         },
         {
           "identifier": "light_background_color",
           "type": "color",
           "description": "Color of your light background on homepage",
           "label": "Light background color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(242, 242, 242, 1)"
         },
         {
           "identifier": "text_color",
@@ -353,7 +353,7 @@
           "type": "text",
           "description": "Size for info notification",
           "label": "Font size",
-          "value": "24px"
+          "value": "14px"
         },
         {
           "identifier": "info_notification_timeout",
@@ -430,7 +430,7 @@
           "type": "color",
           "description": "Color for info notification background",
           "label": "Info Notification Background Color",
-          "value": "rgba(0, 0, 0, 1)"
+          "value": "rgba(82, 45, 109, 1)"
         },
         {
           "identifier": "info_notification_text_color",
@@ -562,61 +562,10 @@
       "label": "Hero Components",
       "variables": [
         {
-          "identifier": "hero_unit_mask_bg_color",
-          "type": "color",
-          "description": "Banner mask color",
-          "label": "Banner mask color",
-          "value": "rgba(7, 7, ,7, 1)"
-        },
-        {
-          "identifier": "hero_unit_mask_opacity",
-          "type": "text",
-          "description": "Banner mask opacity",
-          "label": "Banner mask opacity",
-          "value": "0.3"
-        },
-        {
-          "identifier": "hero_unit_bottom_gradient",
-          "type": "checkbox",
-          "description": "Show or hide Hero unit bottom gradient",
-          "label": "Hero unit bottom gradient",
-          "value": true
-        },
-        {
           "identifier": "hero_image_file",
           "type": "file",
           "description": "The recommended dimensions: 1600x1100px",
           "label": "Banner image"
-        },
-        {
-          "identifier": "hero_banner_gradient_toggle",
-          "type": "checkbox",
-          "description": "Enable hero banner gradient background",
-          "label": "Hero banner gradient background",
-          "value": false
-        },
-        {
-          "identifier": "hero_banner_gradient_value_1",
-          "type": "color",
-          "description": "First value of the gradient",
-          "label": "Hero banner gradient value 1",
-          "value": "#dedad9"
-        },
-        {
-          "identifier": "hero_banner_gradient_value_2",
-          "type": "color",
-          "description": "First value of the gradient",
-          "label": "Hero banner gradient value 2",
-          "value": "rgba(181, 60, 100, 0.01)"
-        },
-        {
-          "identifier": "hero_homepage_height",
-          "type": "range",
-          "description": "Adjust hero banner height",
-          "label": "Hero banner height",
-          "value": 60,
-          "min": 32,
-          "max": 150
         },
         {
           "identifier": "hero_title_text",
@@ -638,134 +587,13 @@
           "description": "Size for hero title",
           "label": "Hero unit title font size",
           "value": "50px"
-        }
-      ]
-    },
-    {
-      "label": "Hero Carousel",
-      "variables": [
-        {
-          "identifier": "hero_carousel",
-          "type": "checkbox",
-          "description": "Toggle carousel for hero",
-          "label": "Show hero carousel",
-          "value": false
         },
         {
-          "identifier": "hero_carousel_autoplay",
-          "type": "checkbox",
-          "description": "Toggle carousel autoplay",
-          "label": "Autoplay",
-          "value": false
-        },
-        {
-          "identifier": "hero_carousel_timeout",
-          "type": "text",
-          "description": "In miliseconds",
-          "label": "Autoplay timeout",
-          "value": "5000"
-        },
-        {
-          "identifier": "hero_carousel_text_1",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Text 1",
-          "value": "This is title 1"
-        },
-        {
-          "identifier": "hero_carousel_desc_1",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Description 1",
-          "value": "This is considered a long text for carousel description placeholder 1"
-        },
-        {
-          "identifier": "hero_carousel_btn_1",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button 1",
-          "value": "Click me"
-        },
-        {
-          "identifier": "hero_carousel_btn_link_1",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button Link 1",
-          "value": "#"
-        },
-        {
-          "identifier": "hero_carousel_image_1",
-          "type": "file",
-          "description": " ",
-          "label": "Carousel Background 1"
-        },
-        {
-          "identifier": "hero_carousel_text_2",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Text 2",
-          "value": "This is title 2"
-        },
-        {
-          "identifier": "hero_carousel_desc_2",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Description 2",
-          "value": "This is considered a long text for carousel description placeholder 2"
-        },
-        {
-          "identifier": "hero_carousel_btn_2",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button 2",
-          "value": "Click me"
-        },
-        {
-          "identifier": "hero_carousel_btn_link_2",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button Link 2",
-          "value": "#"
-        },
-        {
-          "identifier": "hero_carousel_image_2",
-          "type": "file",
-          "description": " ",
-          "label": "Carousel Background 2"
-        },
-        {
-          "identifier": "hero_carousel_text_3",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Text 3",
-          "value": "This is title 3"
-        },
-        {
-          "identifier": "hero_carousel_desc_3",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Description 3",
-          "value": "This is considered a long text for carousel description placeholder 3"
-        },
-        {
-          "identifier": "hero_carousel_btn_3",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button 3",
-          "value": "Click me"
-        },
-        {
-          "identifier": "hero_carousel_btn_link_3",
-          "type": "text",
-          "description": " ",
-          "label": "Carousel Button Link 3",
-          "value": "#"
-        },
-        {
-          "identifier": "hero_carousel_image_3",
-          "type": "file",
-          "description": " ",
-          "label": "Carousel Background 3"
+          "identifier": "hero_example_value",
+          "type": "color",
+          "description": "for testing purposes",
+          "label": "Example value",
+          "value": "rgba(255, 255, 255, 1)"
         }
       ]
     },
@@ -785,27 +613,6 @@
           "description": "Show or hide submit a request link in navigation bar",
           "label": "New Request Toggle",
           "value": true
-        },
-        {
-          "identifier": "promoted_articles_style",
-          "type": "list",
-          "description": "Layout style for promoted articles",
-          "label": "Promoted articles style",
-          "value": "column",
-          "options": [
-            {
-              "label": "Accordion",
-              "value": "accordion"
-            },
-            {
-              "label": "Column",
-              "value": "column"
-            },
-            {
-              "label": "None",
-              "value": "none"
-            }
-          ]
         },
         {
           "identifier": "show_recent_activity_toggle",
@@ -1228,7 +1035,7 @@
         {
           "identifier": "custom_block_1_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1236,14 +1043,14 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Shark Products Information & Support"
+          "value": "Air Purifiers"
         },
         {
           "identifier": "custom_block_1_url",
           "type": "text",
           "description": "Custom block url",
           "label": "URL",
-          "value": "https://support.sharkclean.com/hc/en-us/categories/360003232600-Product-Information-FAQs"
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410562747548"
         }
       ]
     },
@@ -1260,7 +1067,7 @@
         {
           "identifier": "custom_block_2_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1268,14 +1075,14 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Shark Robot Product Information & Support"
+          "value": "Hair Care"
         },
         {
           "identifier": "custom_block_2_url",
           "type": "text",
           "description": "Custom block url",
           "label": "URL",
-          "value": "https://support.sharkclean.com/hc/en-us/sections/4405399628562-Robots"
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410572522908"
         }
       ]
     },
@@ -1292,7 +1099,7 @@
         {
           "identifier": "custom_block_3_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1300,14 +1107,14 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Shark Haircare Product Information & Support"
+          "value": "Hard Floor Cleaning & Irons"
         },
         {
           "identifier": "custom_block_3_url",
           "type": "text",
           "description": "Custom block url",
           "label": "URL",
-          "value": "https://support.sharkclean.com/hc/en-us/sections/4407201386386-Hair-Care"
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410572522908"
         }
       ]
     },
@@ -1319,12 +1126,12 @@
           "type": "checkbox",
           "description": "Show or hide the custom block",
           "label": "Show Custom Block",
-          "value": false
+          "value": true
         },
         {
           "identifier": "custom_block_4_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1332,14 +1139,14 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Troubleshooting"
+          "value": "Carpet Cleaners"
         },
         {
           "identifier": "custom_block_4_url",
           "type": "text",
           "description": "Custom block url",
           "label": "URL",
-          "value": "https://support.sharkclean.com/hc/en-us/categories/4402873069074-Troubleshooting"
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410561534748"
         }
       ]
     },
@@ -1356,7 +1163,7 @@
         {
           "identifier": "custom_block_5_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1364,7 +1171,7 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Order Status / Delivery"
+          "value": "Vacuums"
         },
         {
           "identifier": "custom_block_5_url",
@@ -1388,7 +1195,7 @@
         {
           "identifier": "custom_block_6_icon",
           "type": "file",
-          "description": "The recommended dimensions: 100x100px",
+          "description": "The recommended dimensions: 192x192px",
           "label": "Icon"
         },
         {
@@ -1396,14 +1203,78 @@
           "type": "text",
           "description": "Custom block title",
           "label": "Title",
-          "value": "Warranty & Returns"
+          "value": "Robots"
         },
         {
           "identifier": "custom_block_6_url",
           "type": "text",
           "description": "Custom block url",
           "label": "URL",
-          "value": "https://support.sharkclean.com/hc/en-us/categories/4402873078290-Warranty-Returns"
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410573383452"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 7",
+      "variables": [
+        {
+          "identifier": "custom_block_7_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": false
+        },
+        {
+          "identifier": "custom_block_7_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_7_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "identifier": "custom_block_7_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 8",
+      "variables": [
+        {
+          "identifier": "custom_block_8_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": false
+        },
+        {
+          "identifier": "custom_block_8_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_8_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "identifier": "custom_block_8_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": ""
         }
       ]
     },
@@ -1498,6 +1369,18 @@
           "description": "Enter comma separated category names or sections names",
           "label": "Product pages identifiers",
           "value": "FAQs,Manuals,1-Year Limited Warranty,2-Year Limited Warranty,2-Year Limited Battery Warranty,2-Year VIP Battery Warranty,3-Year Limited Warranty,5-Year Limited Warranty,7-Year Limited Warranty,Lifetime VIP Warranty,60-Day Money Back Guarantee,90-Day Money Back Guarantee"
+        }
+      ]
+    },
+    {
+      "label": "FAQ Section",
+      "variables":[
+        {
+          "identifier" :"show_faq_section",
+          "type":"checkbox",
+          "description": "Show FAQ section variable",
+          "label": "Show FAQ",
+          "value": true
         }
       ]
     },

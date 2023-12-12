@@ -1,0 +1,77 @@
+/* PRIORITY-CATEGORIES */
+.priority-categories {
+  margin-bottom: 40px;
+}
+h3.priority-categories-title {
+  text-align: center;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: .35px;
+}
+.category-counter {
+  display: none;
+}
+.priority-categories-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.priority-categories-category {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  h3.priority-categories-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  .priority-categories-items {
+    gap: 32px;
+  }
+  /* temporary solution to decect the amount of categories for correct grid layout
+     after all major browsers have reliable support for the :has() selector this could
+     be replaced with the `.priority-categories-items:has(:nth-child(n))` selector */
+  .category-counter + .category-counter + .category-counter + .priority-categories-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .category-counter + .category-counter + .category-counter + .category-counter + .priority-categories-items,
+  .priority-categories-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* only for non-mobile devices */
+  .priority-categories-category:hover {
+    box-shadow: 0px 20px 28px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .category-counter + .category-counter + .category-counter + .category-counter + .category-counter + .priority-categories-items {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .category-counter + .category-counter + .category-counter + .category-counter + .category-counter + .category-counter + .priority-categories-items,
+  .priority-categories-items {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.priority-categories-category {
+  background-color: #fff;
+  text-align: center;
+  min-height: 192px;
+  padding: 16px 0 0;
+}
+.priority-category-icon {
+  height: 96px;
+  width: 96px;
+  margin-bottom: 16px;
+}
+.priority-category-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 10% 16px;
+}

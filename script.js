@@ -41,13 +41,6 @@ $(function(){
   // End of category split
 
   const header = $('[data-header]')
-  function handleClip(min, max) {
-    return function(opacity) {
-      if (opacity > max) return max;
-      if (opacity < min) return min;
-      return opacity;
-    }
-  }
 
   $(window).on('scroll', function() {
     var scrollTop = window.scrollY || document.documentElement.scrollTop
