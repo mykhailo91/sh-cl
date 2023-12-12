@@ -1,0 +1,48 @@
+<script>$('#site-header').show();</script>
+<div class="my-activities-nav">  
+  <div class="container">
+    <div class="container-wrapper">
+      <h1>{{t 'my_activities'}}</h1>
+      <nav class="my-activities-dropdown my-activities-dropdown-main">
+        <ul class="my-activities-dropdown-items list-unstyled">
+          <li class="my-activities-dropdown-item">{{link 'requests'}}</li>
+          <li class="my-activities-dropdown-item">{{link 'contributions'}}</li>
+          <li class="my-activities-dropdown-item is-active">{{t 'following'}}</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="container-wrapper">
+
+    {{#if subscriptions}}
+      <table class="my-activities-lists">
+        <thead class="my-activities-lists-head">
+          <tr class="my-activities-lists-row">
+            <th class="my-activities-lists-col">{{t 'title'}}</div>
+            <th class="my-activities-lists-col">{{t 'type'}}</div>
+            <th class="my-activities-lists-col">{{t 'subscription'}}</div>
+          </tr>
+        </thead>
+        <tbody class="my-activities-lists-body">
+          {{#each subscriptions}}
+            <tr class="my-activities-lists-row my-activities-list">
+              <td class="my-activities-lists-col">
+                <a class="my-activities-list-title" href="{{url}}">
+                  {{excerpt title characters=60}}
+                </a>
+              </td>
+              <td class="my-activities-lists-col my-activities-list-meta">{{name}}</div>
+              <td class="my-activities-lists-col my-activities-list-meta">{{following}}</div>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{pagination}}
+    {{else}}
+      <p>{{t 'not_following'}}</p>
+    {{/if}}
+  </div>
+</div>

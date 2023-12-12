@@ -1,0 +1,84 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T6FPTZR');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{#is settings.body_font_family "'Open Sans', sans-serif"}}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+{{/is}}
+{{#is settings.body_font_family "'Roboto', sans-serif"}}
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+{{/is}}
+{{#is settings.body_font_family "'Lato', sans-serif"}}
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+{{/is}}
+{{#is settings.body_font_family "'Slabo 27px', serif"}}
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+{{/is}}
+
+<style>
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url("{{asset 'proximanova-regular-webfont.woff'}}");
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+    src: url("{{asset 'proximanova-bold-webfont.woff'}}");
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+    src: url("{{asset 'proximaNova-light-webfont.woff'}}");
+  }
+</style>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.magnific-popup/1.0.0/magnific-popup.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<link rel="stylesheet" href="{{asset 'owl.carousel.min.css'}}">
+<link rel="stylesheet" href="{{asset 'owl.theme.default.min.css'}}">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.magnific-popup/1.0.0/jquery.magnific-popup.min.js"></script>
+<script src="//cdn.jsdelivr.net/highlight.js/9.10.0/highlight.min.js"></script>
+<script src="https://use.fontawesome.com/c6435311fd.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+
+<script src="{{asset 'owl.carousel.min.js'}}"></script>
+<script src="{{asset 'toc.js'}}"></script>
+<script src="{{asset 'info.js'}}"></script>
+<script src="{{asset 'extensions.js'}}"></script>
+<script src="{{asset 'videoBlock.js'}}"></script>
+<script src="{{asset 'tree-menu.js'}}"></script>
+
+<script>
+  window.solafidConfig = {}
+  solafidConfig.infoNotificationExpiry = '{{settings.info_notification_expiry}}'
+</script>
+{{!-- <script>solafidConfig.lightbox = '{{settings.lightbox_toggle}}'</script> --}}
+
+

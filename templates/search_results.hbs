@@ -1,0 +1,138 @@
+<script>$('#site-header').show();</script>
+<div class="hero-item changed" data-hero-item>
+  <div class="hero-background" data-hero-background ></div>
+  <div class="container-wrapper search-container search-container-hero-item" data-hero-box>
+    <div class="hero-title">
+      {{#if settings.dc_toggle}}
+        {{dc 'hero_title_text'}}
+      {{else}}
+        {{settings.hero_title_text}}
+      {{/if}}
+    </div>
+    {{search instant=true placeholder=settings.search_placeholder_text}}
+  </div>
+</div>
+
+
+<div class="container search-results-page">
+  <div class="container-wrapper">
+    <div class="row search-results clearfix">
+
+      <div class="col col-sm-3">
+        <div class="search-results-filters">
+          {{#if help_center_filters}}
+            <section class="search-results-filter collapsible-sidebar" aria-expanded="false">
+              <h4 class="search-results-filter-title collapsible-sidebar-toggle" aria-expanded="false">{{t 'filter_by_help_center'}}</h4>
+              <ul class="list-unstyled search-results-filter-list" >
+                {{#each help_center_filters}}
+                  <li class="search-results-filter-item {{#if selected}}is-active{{/if}}">
+                    <a href="{{url}}" class="search-results-filter-link">
+                      <span class="search-results-filter-name">{{name}}</span>
+                      <span class="search-results-filter-count">({{count}})</span>
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </section>
+          {{/if}}
+          {{#if help_center.community_enabled}}
+            <section class="search-results-filter collapsible-sidebar" aria-expanded="false">
+              <h4 class="search-results-filter-title collapsible-sidebar-toggle" aria-expanded="false">{{t 'filter_by_type'}}</h4>
+              <ul class="list-unstyled search-results-filter-list">
+                {{#each filters}}
+                  <li class="search-results-filter-item {{#if selected}}is-active{{/if}}">
+                    <a href="{{url}}" class="search-results-filter-link">
+                      <span class="search-results-filter-name">{{name}}</span>
+                      <span class="search-results-filter-count">({{count}})</span>
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </section>
+          {{/if}}
+          {{#if subfilters}}
+            <section class="search-results-filter collapsible-sidebar" aria-expanded="false">
+              {{#is current_filter.identifier 'knowledge_base'}}
+                <h4 class="search-results-filter-title collapsible-sidebar-toggle" aria-expanded="false">{{t 'filter_by_category'}}</h4>
+              {{/is}}
+              {{#is current_filter.identifier 'community'}}
+                <h4 class="search-results-filter-title">{{t 'filter_by_topic'}}</h4>
+              {{/is}}
+              <ul class="list-unstyled search-results-filter-list search-result-subfilters">
+                {{#each subfilters}}
+                  <li class="search-results-filter-item search-results-filter-item-subfilter {{#if selected}}is-active{{/if}}">
+                    <a href="{{url}}" class="search-results-filter-link">
+                      <span class="search-results-filter-name">{{name}}</span>
+                      <span class="search-results-filter-count">({{count}})</span>
+                    </a>
+                  </li>
+                {{/each}}
+                {{#is current_filter.identifier 'knowledge_base'}}
+                  <li class="search-results-filter-item">
+                  <button class="search-result-show-more see-all-filters" aria-hidden="true">{{t 'show_more_categories'}}</button>
+                  </li>
+                {{/is}}
+                {{#is current_filter.identifier 'community'}}
+                  <li class="search-results-filter-item">
+                  <button class="search-result-show-more see-all-filters" aria-hidden="true">{{t 'show_more_topics'}}</button>
+                  </li>
+                {{/is}}
+              </ul>
+            </section>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="col col-sm-8">
+        <h1 class="search-results-count">
+          {{#is current_filter.identifier 'unified'}}
+            {{t 'results' query=query count=results_count}}
+          {{else}}
+            {{#unless current_subfilter.identifier}}
+              {{t 'results' query=query count=results_count}}
+            {{else}}
+              {{t 'results_with_scope' query=query count=results_count scope_name=current_subfilter.name}}
+            {{/unless}}
+          {{/is}}
+        </h1>
+        {{#if results}}
+          <ul class="list-unstyled search-results-list">
+            {{#each results}}
+              <li class="search-result result-{{type}}">
+                <h3 class="h5 search-result-title">
+                  <a href="{{url}}" class="search-result-link">{{title}}</a>
+                  
+                </h3>
+                <ol class="breadcrumbs search-result-breadcrumbs">
+                  {{#each path_steps}}
+                    <li title="{{name}}"><a href="{{url}}">{{name}}</a></li>
+                  {{/each}}
+                </ol>
+                <p class="search-result-description">{{text}}</p>
+
+                
+              </li>
+            {{/each}}
+          </ul>
+        {{else}}
+          <p>
+            {{t 'no_results_unified'}}
+            {{#link 'help_center'}}
+              {{t 'browse_help_center'}}
+            {{/link}}
+          </p>
+        {{/if}}
+        {{pagination}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    if ($('.search-results-filter').length == 0){
+      $('.search-results-filters').hide();
+    }
+  })
+</script>

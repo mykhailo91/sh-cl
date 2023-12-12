@@ -1,0 +1,552 @@
+<script>
+  $('.wrapper-main').css({"margin-top" : "0"});
+  $('#site-header').removeClass('header-has-background')
+  $('.head').append('<style>.search:before { background : url("{{asset 'Search.svg'}}"); } </style>');
+  $(document).ready(function(){
+    $('#site-header').show(0);
+    $('#header-homepage').show(0);
+    $('.hero-title').addClass('animate-animated animate-fadeInUp animate-delay-1.5s');
+  });
+  $('.header-panel > a, .hc-name a').css({"color" : "{{settings.hero_title_color}}"})
+  $('.searchbar-top').css({'display' : 'none'})
+</script>
+
+{{#if settings.hero_carousel}}
+<div id="hero-carousel" class="owl-carousel owl-theme" style="overflow: hidden;">
+  {{#isnt settings.hero_carousel_text_1 ''}}
+  <div class="hero-item">
+    <div class="hero-background hero-background-carousel-1 {{#if settings.hero_unit_bottom_gradient}}gradient{{/if}}" data-hero-background ></div>
+    <div class="container-wrapper search-container search-container-hero-item" data-hero-box>
+      <div class="text-center">
+        <div class="hero-title">
+          {{settings.hero_carousel_text_1}}
+        </div>
+        <p class="hero-desc">
+          {{settings.hero_carousel_desc_1}}
+        </p>
+        <a href="{{settings.hero_carousel_btn_link_1}}" class="hero-button btn btn-primary">
+          {{settings.hero_carousel_btn_1}}
+        </a>
+      </div>
+    </div>
+  </div>
+  {{/isnt}}
+
+  {{#isnt settings.hero_carousel_text_2 ''}}
+  <div class="hero-item">
+    <div class="hero-background hero-background-carousel-2 {{#if settings.hero_unit_bottom_gradient}}gradient{{/if}}" data-hero-background ></div>
+    <div class="container-wrapper search-container search-container-hero-item" data-hero-box>
+      <div class="text-center">
+        <div class="hero-title">
+          {{settings.hero_carousel_text_2}}
+        </div>
+        <p class="hero-desc">
+          {{settings.hero_carousel_desc_2}}
+        </p>
+        <a href="{{settings.hero_carousel_btn_link_2}}" class="hero-button btn btn-primary">
+          {{settings.hero_carousel_btn_2}}
+        </a>
+      </div>
+    </div>
+  </div>
+  {{/isnt}}
+
+  {{#isnt settings.hero_carousel_text_3 ''}}
+  <div class="hero-item">
+    <div class="hero-background hero-background-carousel-3 {{#if settings.hero_unit_bottom_gradient}}gradient{{/if}}" data-hero-background ></div>
+    <div class="container-wrapper search-container search-container-hero-item" data-hero-box>
+      <div class="text-center">
+        <div class="hero-title">
+          {{settings.hero_carousel_text_3}}
+        </div>
+        <p class="hero-desc">
+          {{settings.hero_carousel_desc_3}}
+        </p>
+        <a href="{{settings.hero_carousel_btn_link_3}}" class="hero-button btn btn-primary">
+          {{settings.hero_carousel_btn_3}}
+        </a>
+      </div>
+    </div>
+  </div>
+  {{/isnt}}
+</div>
+{{else}}
+<div class="hero-item">
+  <div class="hero-background {{#if settings.hero_banner_gradient_toggle}} hero-background-gradient {{/if}}{{#if settings.hero_unit_bottom_gradient}}gradient{{/if}}" data-hero-background ></div>
+  <div class="container-wrapper search-container search-container-hero-item" data-hero-box>
+    <div class="hero-title">
+      {{#if settings.dc_toggle}}
+        {{dc 'intro_title_text'}}
+      {{else}}
+        {{settings.hero_title_text}}
+      {{/if}}
+    </div>
+    <div class="relative">
+      {{search instant=true placeholder=settings.search_placeholder_text}}
+      <div class="searchbar-info" data-fancybox data-src="#findModel">
+        <i class="fa fa-info-circle"></i>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+<div class="homepage-container light-bg">
+  <div class="container-wrapper homepage-base">
+    {{#if settings.show_information_box}}
+    <section class="section knowledge-base">
+      <div id="homepage-carousel" class="owl-carousel owl-theme" style="overflow:hidden;">
+        {{#isnt settings.homepage_info_title_1 ''}}
+        <a href="{{settings.homepage_info_link_1}}">
+          <div>
+            <div class="text-center">
+              <h4>{{#if settings.dc_toggle}}{{dc 'homepage_info_title_1'}}{{else}}{{settings.homepage_info_title_1}}{{/if}}</h4>
+            </div>
+          </div>
+        </a>
+        {{/isnt}}
+        {{#isnt settings.homepage_info_title_2 ''}}
+        <a href="{{settings.homepage_info_link_2}}">
+          <div>
+            <div class="text-center">
+              <h4>{{#if settings.dc_toggle}}{{dc 'homepage_info_title_2'}}{{else}}{{settings.homepage_info_title_2}}{{/if}}</h4>
+            </div>
+          </div>
+        </a>
+        {{/isnt}}
+        {{#isnt settings.homepage_info_title_3 ''}}
+        <a href="{{settings.homepage_info_link_3}}">
+          <div>
+            <div class="text-center">
+              <h4>{{#if settings.dc_toggle}}{{dc 'homepage_info_title_3'}}{{else}}{{settings.homepage_info_title_3}}{{/if}}</h4>
+            </div>
+          </div>
+        </a>
+        {{/isnt}}
+      </div>
+    </section>
+    {{/if}}
+    <div class="site-wrapper">
+      {{#if settings.custom_block_1_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_1_url'}}{{else}}{{settings.custom_block_1_url}}{{/if}}">
+          <div class="site-icon site-icon-1"><img class="custom-block-image"src="{{settings.custom_block_1_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_1_title'}}
+              {{else}}
+                {{settings.custom_block_1_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+      {{#if settings.custom_block_2_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_2_url'}}{{else}}{{settings.custom_block_2_url}}{{/if}}">
+          <div class="site-icon site-icon-2"><img class="custom-block-image"src="{{settings.custom_block_2_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_2_title'}}
+              {{else}}
+                {{settings.custom_block_2_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+      {{#if settings.custom_block_3_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_3_url'}}{{else}}{{settings.custom_block_3_url}}{{/if}}">
+          <div class="site-icon site-icon-3"><img class="custom-block-image"src="{{settings.custom_block_3_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_3_title'}}
+              {{else}}
+                {{settings.custom_block_3_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+      {{#if settings.custom_block_4_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_4_url'}}{{else}}{{settings.custom_block_4_url}}{{/if}}">
+          <div class="site-icon site-icon-4"><img class="custom-block-image"src="{{settings.custom_block_4_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_4_title'}}
+              {{else}}
+                {{settings.custom_block_4_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+      {{#if settings.custom_block_5_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_5_url'}}{{else}}{{settings.custom_block_5_url}}{{/if}}">
+          <div class="site-icon site-icon-5"><img class="custom-block-image"src="{{settings.custom_block_5_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_5_title'}}
+              {{else}}
+                {{settings.custom_block_5_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+      {{#if settings.custom_block_6_toggle}}
+      <div class="site-block">
+        <a class="site-div" href="{{#if settings.dc_toggle}}{{dc 'custom_block_6_url'}}{{else}}{{settings.custom_block_6_url}}{{/if}}">
+          <div class="site-icon site-icon-6"><img class="custom-block-image"src="{{settings.custom_block_6_icon}}" alt=""></div>
+          <h4>{{#if settings.dc_toggle}}
+                {{dc'custom_block_6_title'}}
+              {{else}}
+                {{settings.custom_block_6_title}}
+              {{/if}}
+          </h4>
+        </a>
+      </div>
+      {{/if}}
+
+    </div>  
+  </div>
+  
+	<!--  Modified Robot Banner  -->
+  <div class="content-container container-wrapper">
+    <a href="https://support.sharkclean.com/hc/en-us/articles/8526345569180-Robot-App-Language-Setting-in-App-Update" class="app-banner-wrapper">
+      <div class="app-banner hide-in-mobile">
+        <img src={{asset 'SharkIcon_transparent.png'}}>
+				<div class="app-banner-title">
+          <h2 style="text-align: center; font-weight:bold;">SharkNinja Robot App Update</h2>
+          <h2 style="text-align: center; font-weight:bold;">Consumer Action Needed</h2>
+        </div>
+        <img src={{asset 'shark-robotics.png'}} >
+      </div>
+      <div class="app-banner hide-in-desktop">
+				<div class="app-banner-title">
+          <h2 style="text-align: center; font-weight:bold;">SharkNinja Robot App Update</h2>
+          <h2 style="text-align: center; font-weight:bold;">Consumer Action Needed</h2>
+        </div>
+				<div class="app-banner-icon">
+          <img src={{asset 'SharkIcon_transparent.png'}}>
+          <img src={{asset 'shark-robotics.png'}} >
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="content-container container-wrapper">
+    {{#if settings.show_categories_toggle}}
+    <section class="content-base content-category">
+      <h3 class="content-header">{{t'categories'}}</h3>
+      <div id="content-parent" class="content-wrapper">
+        <div id="left-col">
+        {{#each categories}}
+          {{#isnt name 'Product Information & FAQs'}}
+          {{#isnt name 'Troubleshooting'}}
+          {{#isnt name 'Order Status'}}
+          {{#isnt name 'Warranty & Returns'}}
+          {{#isnt name 'Contact Us'}}
+          {{#isnt name 'Order Status / Delivery'}}
+          
+          {{#if ../has_multiple_categories}}
+          <div class="content-block" data-category="{{name}}">
+            <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
+              <div class="content-link-title">{{name}}</div>
+              <i class="fa"></i> 
+            </a>
+            <div id="{{name}}" class="content-section collapse">
+              <p class="content-link-description">{{description}}</p>
+              <ul class="content-list">
+                {{#each sections}}
+                <li><a href="{{url}}">{{name}}</a></li>
+                {{/each}}
+                {{#if more_sections}}
+                <a href="{{url}}" class="all-article">
+                  {{t 'see_all_sections'}}
+                </a>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{else}}
+          {{#each sections}}
+          <div class="content-block">
+            <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
+              <div class="content-link-title">{{name}}</div>
+              <i class="fa"></i>
+            </a>
+            <div id="{{name}}" class="content-section collapse">
+              <p class="content-link-description">{{description}}</p>
+              <ul class="content-list">
+                {{#each articles}}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {{/each}}
+                {{#if more_articles}}
+                <a href="{{url}}" class="all-article">
+                  {{t 'show_all_articles' count=article_count}}
+                </a>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+          {{/if}}
+          {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
+        {{/each}}
+        </div>
+        <div id="right-col">
+        {{#each categories}}
+          {{#isnt name 'Product Information & FAQs'}}
+          {{#isnt name 'Troubleshooting'}}
+          {{#isnt name 'Order Status'}}
+          {{#isnt name 'Warranty & Returns'}}
+          {{#isnt name 'Contact Us'}}
+          {{#isnt name 'Order Status / Delivery'}}
+
+          {{#if ../has_multiple_categories}}
+          <div class="content-block" data-category="{{name}}">
+            <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
+              <div class="content-link-title">{{name}}</div>
+              <i class="fa"></i> 
+            </a>
+            <div id="{{name}}" class="content-section collapse">
+              <p class="content-link-description">{{description}}</p>
+              <ul class="content-list">
+                {{#each sections}}
+                <li><a href="{{url}}">{{name}}</a></li>
+                {{/each}}
+                {{#if more_sections}}
+                <a href="{{url}}" class="all-article">
+                  {{t 'see_all_sections'}}
+                </a>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{else}}
+          {{#each sections}}
+          <div class="content-block">
+            <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
+              <div class="content-link-title">{{name}}</div>
+              <i class="fa"></i>
+            </a>
+            <div id="{{name}}" class="content-section collapse">
+              <p class="content-link-description">{{description}}</p>
+              <ul class="content-list">
+                {{#each articles}}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {{/each}}
+                {{#if more_articles}}
+                <a href="{{url}}" class="all-article">
+                  {{t 'show_all_articles' count=article_count}}
+                </a>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+          {{/if}}
+
+          {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
+        {{/each}}
+        </div>
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if settings.videos_toggle}}
+    <div class="site-video">
+      <h3 class="content-header">
+        {{#if settings.dc_toggle}}
+        {{dc 'video_section_title'}}
+        {{else}}
+        {{settings.video_section_title}}
+        {{/if}}
+      </h3>
+      <span data-action="slideLeft" class="button-carousel">&#139;</span>
+      <span data-action="slideRight" class="button-carousel">&#155;</span>
+      <div class="site-video-items" id="carousel">
+        {{#if settings.video_block_1}}
+        <a {{#is settings.video_block_1_list 'Other'}}target="_blank" href="{{#if settings.dc_toggle}}{{dc'video_block_1_id'}}{{else}}{{settings.video_block_1_id}}{{/if}}"{{/is}} class="site-video-item carousel-item" {{#is settings.video_block_1_list 'Embed Video'}}data-src="{{settings.video_block_1_id}}" data-toggle="modal" data-target="#video-modal"{{/is}}>
+          <div class="site-video-img{{#if settings.show_play_button_1}} site-video-icon{{/if}}" style="background-image: url({{settings.video_block_1_img}});">
+
+          </div>
+          <div class="site-video-title">
+            {{#if settings.dc_toggle}}
+            {{dc'video_block_1_title'}}
+            {{else}}
+            {{settings.video_block_1_title}}
+            {{/if}}
+          </div>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+    
+    {{#if promoted_articles}}
+    {{#is settings.promoted_articles_style 'accordion'}}
+    <section class="content-base homepage-articles promoted-accordion">
+    <div class="container">
+      <div class="container-wrapper">
+        <h2 class="content-header">{{t 'promoted_articles'}}</h2>
+        <div id="accordion">
+          {{#each promoted_articles}}
+          <div class="promoted-articles">
+            <div class="promoted-articles_title">
+              <a data-toggle="collapse" data-target="#{{id}}" aria-expanded="false" data-parent="#accordion" data-target="#{{id}}" aria-controls="{{id}}"><h3 style="max-width:90%;">{{title}}</h3><div class="collapse_icon"><span></span><span></span></div></a>
+            </div>
+            <div id="{{id}}" class="collapse py-2">
+              <div class="promoted-articles-wrapper">
+                <div class="promoted-articles_body">
+                  {{body}}
+                </div>
+                <a href="{{url}}" class="btn promoted-articles-btn">{{t 'see_more'}}</a>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    </section>
+    {{/is}}
+    {{#is settings.promoted_articles_style 'column'}}
+    <section class="content-base homepage-articles">
+      <h3>{{t 'promoted_articles'}}</h3>
+        <ul class="article-list promoted-articles">
+          {{#each promoted_articles}}
+            <li>
+              <a href="{{url}}">
+                {{title}}
+              </a>
+            </li>
+         {{/each}}
+        </ul>
+    </section>
+    {{/is}}
+    {{/if}}
+    {{#is settings.promoted_articles_style 'none'}}{{/is}}
+
+    {{#if settings.show_recent_activity_toggle}}
+    <section class="content-base homepage-articles">
+      {{recent_activity}}
+    </section>
+    {{/if}}
+
+  </div>
+</div>
+
+<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="site-video-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      
+      <div class="modal-body">
+
+        <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </div>        
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+        </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
+<template id="video-block">
+  <a class="site-video-item carousel-item" data-toggle="modal" data-target="#video-modal">
+    <div class="site-video-img site-video-icon">
+
+    </div>
+    <div class="site-video-title">
+
+    </div>
+  </a>
+</template>
+<script>
+console.log($(window).width())
+{{#if settings.videos_toggle}}
+$(document).ready(function() {
+  $.when(loadVideo('{{settings.video_id_arrays}}')).done(function() {
+    carouselVideo()
+    $(window).resize(function() {
+      carouselVideo()
+    })
+  })
+})
+{{/if}}
+</script>
+
+<script>
+  function getElementsById(id) {
+    const elementsWithId = []
+    const allElements = document.getElementsByTagName('*')
+    for(let key in allElements) {
+        if(allElements.hasOwnProperty(key)) {
+            const element = allElements[key]
+            if(element.id == id) {
+              elementsWithId.push(element)
+            }
+        }
+    }
+    return elementsWithId
+  }
+
+  function a(ids) {
+    return [ids].map(id => document.getElementById(id));
+  }
+  
+  $(document).ready(function(){
+    console.log(a({{settings.category_ids}}))
+    let owlOptions = {
+      items: 1,
+      dots: false,
+      loop: true,
+      slideTransition: 'linear',
+      autoplay: {{settings.hero_carousel_autoplay}},
+      autoplayTimeout: "{{settings.hero_carousel_timeout}}",
+      autoplayHoverPause: true,
+      nav: true,
+      navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+    }
+
+    $("#hero-carousel").owlCarousel(owlOptions);
+  });
+
+  $(document).ready(function(){
+    let owlOptionsHomepage = {
+      items: 1,
+      dots: false,
+      loop: true,
+      slideTransition: 'linear',
+      autoplay: {{ settings.info_box_carousel_autoplay }},
+      autoplayTimeout: "{{settings.info_box_carousel_timeout}}",
+      autoplayHoverPause: true,
+      nav: true,
+      navText: ['<div class="button-info-box"><i class="fa fa-angle-left info-box-prev" aria-hidden="true"></i></div>','<div class="button-info-box"><i class="fa fa-angle-right info-box-next" aria-hidden="true"></i></div>']
+    }
+
+    $("#homepage-carousel").owlCarousel(owlOptionsHomepage);
+  });
+</script>
+<script>
+  $(function() {
+    $('.owl-carousel').owlCarousel({
+      items: 3,
+      stagePadding: 30
+    })
+  })
+
+  if ($('.site-video-items').children().length === 0) {
+    $('.site-video').hide();
+  }
+</script>

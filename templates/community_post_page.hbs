@@ -1,0 +1,209 @@
+<script>
+  $('.search-full').hide();
+  $('#site-header').show();
+</script>
+<div class="container post-container">
+  <div class="container-wrapper">
+    <div class="row clearfix">
+      <div class="col col-sm-8">
+        {{breadcrumbs}}
+      </div>
+      <div class="col col-sm-4">
+        <div class="search-container search-container-small">
+          {{search instant=true submit=false}}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row clearfix">
+      <div class="col col-sm-8">
+        <article class="post {{#if post.featured}} post-featured {{/if}} {{#if post.pinned}} post-pinned {{/if}}">
+          <div class="post-body">
+            {{#is post.status 'none'}}
+            {{else}}
+              <span class="post-status-label post-status-label-{{post.status_dasherized}}">{{post.status_name}} </span>
+            {{/is}}
+            <h1 class="post-title">{{post.title}}</h1>
+
+            <div class="post-meta">
+              <div class="post-meta-col post-meta-col-main">
+                <div class="meta-info">
+                  <div class="meta-info-avatar">
+                    <div class="avatar {{#if post.author.agent}}avatar-agent{{/if}}">
+                      <img class="user-avatar" src="{{post.author.avatar_url}}" alt="Avatar">
+                    </div>
+                  </div>
+                  <div class="meta-info-content">
+                    <b class="author">
+                      {{#link 'user_profile' id=post.author.id}}
+                        {{post.author.name}}
+                      {{/link}}
+                    </b>
+                    <div class="meta">{{date post.created_at}}</div>
+                  </div>
+                </div>
+              </div>
+              {{!-- {{#if settings.show_follow_community_post}}
+                <div class="post-meta-col post-meta-col-btn">
+                  {{subscribe}}
+                </div>
+              {{/if}} --}}
+            </div>
+
+            <div class="post-text markdown">
+              {{post.details}}
+            </div>
+          </div>
+          <div class="vote-wrapper" style="display:flex; justify-content: flex-end; padding-right: 52px;">
+            <div class="post-voting-and-actions">
+              <div class="vote vote-post">
+                {{#with post}}
+                {{#vote 'up' class='btn vote-menu vote-menu-up' selected_class='vote-menu-active' role='button'}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" style="transform: rotate(180deg);">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                  </svg>
+                {{/vote}}
+                <div class="vote-sum">
+                  {{vote 'sum'}}
+                </div>
+                {{#vote 'down' class='btn vote-menu vote-menu-down' selected_class='vote-menu-active' role='button'}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                  </svg>
+                {{/vote}}
+                {{/with}}
+              </div>
+            <div class="post-actions">
+              {{#post.actions}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+               <path fill="none" stroke="currentColor" d="M13.17 3.07l-1.64.71c-.48-.4-1.03-.72-1.63-.94l-.22-1.79a.511.511 0 00-.4-.44C8.86.54 8.44.5 8 .5c-.44 0-.86.04-1.28.11-.22.04-.38.22-.4.44l-.21 1.79c-.6.22-1.15.54-1.63.94l-1.65-.71a.491.491 0 00-.58.13c-.55.65-.99 1.4-1.29 2.21-.08.21 0 .44.18.58l1.45 1.08a4.91 4.91 0 000 1.87l-1.45 1.08c-.18.13-.25.37-.18.58.3.81.74 1.55 1.28 2.2.14.17.38.22.58.13l1.65-.71c.48.4 1.03.72 1.63.94l.21 1.79c.03.22.19.4.4.44.43.07.85.11 1.29.11.44 0 .86-.04 1.28-.11.22-.04.38-.22.4-.44l.21-1.79c.6-.22 1.15-.54 1.63-.94l1.65.71c.2.09.44.04.58-.13.54-.65.98-1.39 1.28-2.2.08-.21 0-.44-.18-.57L13.4 8.95c.07-.32.1-.63.1-.95s-.03-.63-.09-.94l1.45-1.08c.18-.13.25-.37.18-.58-.3-.81-.74-1.55-1.28-2.2a.51.51 0 00-.59-.13z"/>
+               <circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/>
+              </svg>
+              {{/post.actions}}
+            </div>
+          </div>
+        </article>
+
+        <section class="comments" id="comments">
+          <div class="comment-header">
+            <h3>{{t 'comments'}}</h3>
+
+            <div class="comment-sorter">
+              <div class="comment-sorter-col comment-sorter-col-main">
+                {{t 'comments_count' count=post.comment_count}}
+              </div>
+
+              {{#if comments}}
+                <div class="comment-sorter-col comment-sorter-col-filters">
+                  <div class="dropdown">
+                    <a class="dropdown-toggle btn btn-default">{{t 'sort_by'}}</a>
+                    <span class="dropdown-menu dropdown-menu-end" role="menu">
+                      {{#each comment_sorters}}
+                        <a aria-selected="{{selected}}" href="{{url}}" role="menuitem">{{name}}</a>
+                      {{/each}}
+                    </span>
+                  </div>
+                </div>
+              {{/if}}
+            </div>
+          </div>
+
+          {{#if comments}}
+            <ul class="comment-list">
+              {{#each comments}}
+                <li class="comment {{#if official}}comment-official{{/if}}" id="{{anchor}}">
+                  <div class="comment-wrapper">
+                    <div class="comment-content">
+                      {{#if official}}
+                        <span class="comment-official-heading">{{t 'official_comment'}}</span>
+                      {{/if}}
+
+                      <div class="meta-info comment-header">
+                        <div class="meta-info-avatar">
+                          <div class="avatar {{#if author.agent}}avatar-agent{{/if}}">
+                            <img class="user-avatar" src="{{author.avatar_url}}" alt="Avatar">
+                          </div>
+                        </div>
+                        <div class="meta-info-content">
+                          <b class="author">
+                            {{#link 'user_profile' id=author.id}}
+                              {{author.name}}
+                            {{/link}}
+                          </b>
+                          <div class="meta">
+                            {{date created_at}}
+                            {{#if editor}}
+                              ({{t 'edited'}} {{date edited_at timeago=true}})
+                            {{/if}}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="comment-body markdown">
+                        {{body}}
+                      </div>
+                    </div>
+
+                    <div class="comment-voting-and-actions">
+                      {{#unless official}}
+                        <div class="vote vote-comment">
+                          {{#vote 'up' class='btn vote-menu vote-menu-up' selected_class='vote-menu-active' role='button'}}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" style="transform: rotate(180deg);">
+                              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                            </svg>
+                          {{/vote}}
+                          <div class="vote-sum">
+                            {{vote 'sum'}}
+                          </div>
+                          {{#vote 'down' class='btn vote-menu vote-menu-down' selected_class='vote-menu-active' role='button'}}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                            </svg>
+                          {{/vote}}
+                        </div>
+                      {{/unless}}
+                      <div class="comment-actions">
+                        {{#actions}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                        <path fill="none" stroke="currentColor" d="M13.17 3.07l-1.64.71c-.48-.4-1.03-.72-1.63-.94l-.22-1.79a.511.511 0 00-.4-.44C8.86.54 8.44.5 8 .5c-.44 0-.86.04-1.28.11-.22.04-.38.22-.4.44l-.21 1.79c-.6.22-1.15.54-1.63.94l-1.65-.71a.491.491 0 00-.58.13c-.55.65-.99 1.4-1.29 2.21-.08.21 0 .44.18.58l1.45 1.08a4.91 4.91 0 000 1.87l-1.45 1.08c-.18.13-.25.37-.18.58.3.81.74 1.55 1.28 2.2.14.17.38.22.58.13l1.65-.71c.48.4 1.03.72 1.63.94l.21 1.79c.03.22.19.4.4.44.43.07.85.11 1.29.11.44 0 .86-.04 1.28-.11.22-.04.38-.22.4-.44l.21-1.79c.6-.22 1.15-.54 1.63-.94l1.65.71c.2.09.44.04.58-.13.54-.65.98-1.39 1.28-2.2.08-.21 0-.44-.18-.57L13.4 8.95c.07-.32.1-.63.1-.95s-.03-.63-.09-.94l1.45-1.08c.18-.13.25-.37.18-.58-.3-.81-.74-1.55-1.28-2.2a.51.51 0 00-.59-.13z"/>
+                        <circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/>
+                        </svg>
+                        {{/actions}}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+            {{pagination}}
+          {{/if}}
+
+          <p class="comment-callout">{{comment_callout}}</p>
+
+
+          {{#form 'comment' class='comment-form'}}
+              <div class="avatar comment-avatar">
+                {{user_avatar class='user-avatar'}}
+              </div>
+              <div class="comment-container">
+                {{wysiwyg 'body'}}
+                <div class="comment-form-panel">
+                  {{checkbox 'official'}}
+                  {{label 'official'}}
+                </div>
+                {{input type='submit' class="button button-large"}}
+              </div>
+          {{/form}}
+
+        </section>
+      </div>
+      <div class="col col-sm-4">
+        <div class="post-suggest">
+          <h3 class="post-suggest-title">{{t 'suggest_new_post'}}</h3>
+          {{link 'new_post' role='button' class='btn btn-primary'}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

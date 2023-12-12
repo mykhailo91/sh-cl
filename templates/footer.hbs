@@ -1,0 +1,143 @@
+</div>
+<div class="wrapper-footer">
+  <footer class="footer">
+    <div class="container footer-wrapper">
+      <div class="flex flex-col justify-center text-center items-center">
+        <div class="social-col mb-6 space-x-8">
+          {{#is settings.facebook_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'facebook_url'}}{{else}}{{settings.facebook_url}}{{/if}}"
+            target="_blank" class="footer-social-link fa fa-facebook"></a>
+          {{/is}}
+          {{#is settings.youtube_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'youtube_url'}}{{else}}{{settings.youtube_url}}{{/if}}"
+            target="_blank" class="footer-social-link fab fa-youtube"></a>
+          {{/is}}
+          {{#is settings.instagram_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'instagram_url'}}{{else}}{{settings.instagram_url}}{{/if}}"
+            target="_blank" class="footer-social-link fab fa-instagram"></a>
+          {{/is}}
+          {{#is settings.twitter_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'twitter_url'}}{{else}}{{settings.twitter_url}}{{/if}}"
+            target="_blank" class="footer-social-link fab fa-twitter"></a>
+          {{/is}}
+          {{#is settings.pinterest_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'pinterest_url'}}{{else}}{{settings.pinterest_url}}{{/if}}"
+            target="_blank" class="footer-social-link fa fa-pinterest"></a>
+          {{/is}}
+          {{#is settings.tiktok_url ''}}{{else}}
+          <a href="{{#if settings.dc_toggle}}{{dc 'tiktok_url'}}{{else}}{{settings.tiktok_url}}{{/if}}"
+            target="_blank" class="footer-social-link fab fa-tiktok"></a>
+          {{/is}}
+        </div>
+        <p class="text-lg">
+          {{#is settings.footer_url_link_1 ''}}{{else}}
+          <a href="{{settings.footer_url_link_1}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_1'}}{{else}}{{settings.footer_url_title_1}}{{/if}}</a>
+          |
+          {{/is}}
+          {{#is settings.footer_url_link_2 ''}}{{else}}
+          <a href="{{settings.footer_url_link_2}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_2'}}{{else}}{{settings.footer_url_title_2}}{{/if}}</a>
+          |
+          {{/is}}
+          {{#is settings.footer_url_link_3 ''}}{{else}}
+          <a target="_blank" href="{{settings.footer_url_link_3}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_3'}}{{else}}{{settings.footer_url_title_3}}{{/if}}</a>
+          |
+          {{/is}}
+          {{#is settings.footer_url_link_4 ''}}{{else}}
+          <a href="{{settings.footer_url_link_4}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_4'}}{{else}}{{settings.footer_url_title_4}}{{/if}}</a>
+          |
+          {{/is}}
+          {{#is settings.footer_url_link_5 ''}}{{else}}
+          <a href="{{settings.footer_url_link_5}}">{{#if settings.dc_toggle}}{{dc 'footer_url_title_5'}}{{else}}{{settings.footer_url_title_5}}{{/if}}</a>
+          {{/is}}
+          <br>
+          {{#if settings.toggle_footer_copyright}}        
+          {{settings.footer_copyright}}
+          {{/if}}
+          {{#if settings.toggle_copyright_link}}
+          <a href="{{settings.copyright_link_url}}">{{#if settings.dc_toggle}}{{dc 'copyright_link_title'}}{{else}}{{settings.copyright_link_title}}{{/if}}</a>
+          {{/if}}
+        </p>
+        <a target="_blank" href="https://www.bbb.org/us/ma/needham/profile/wholesale-small-appliances/sharkninja-0021-119951#bbbonlineclick">
+          <img src="{{asset 'bbb.png'}}" class="text-center" width="100" alt="">
+        </a>
+      </div>
+      {{!-- <div class="row d-flex">
+        <div class="footer-col copyrights col col-sm-7 col-md-8">
+          {{#link 'help_center'}}
+          <img class="mobile-logo" src="{{settings.footer_logo}}" alt="{{t 'logo'}}">
+          {{/link}}
+          <div class="footer-logo">
+            {{#link 'help_center'}}
+            <img src="{{settings.footer_logo}}" alt="{{t 'logo'}}">
+            {{/link}}
+          </div>
+          <div class="copyrights-col">
+            <p>
+              {{#if settings.dc_toggle}}
+              {{dc'footer_copyright'}}
+              {{else}}
+              {{settings.footer_copyright}}
+              {{/if}}
+            </p>
+          </div>
+
+          {{#if alternative_locales}}
+          <div class="dropdown language-dropdown" aria-haspopup="true">
+            <a class="dropdown-toggle btn btn-footer">
+              {{current_locale.name}}
+            </a>
+            <span class="dropdown-menu dropdown-menu-top dropdown-footer" role="menu">
+              {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+              {{/each}}
+            </span>
+          </div>
+          {{/if}}
+        </div>
+        <div class="footer-col footer-col-social-links col col-sm-5 col-md-4">
+          <div class="custom-link-col">
+            {{#if settings.toggle_footer_url_1}}<a
+              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_1'}}{{else}}{{settings.footer_url_link_1}}{{/if}}"
+              class="custom-link">{{#if
+              settings.dc_toggle}}{{dc'footer_url_title_1'}}{{else}}{{settings.footer_url_title_1}}{{/if}}</a>{{/if}}
+            {{#if settings.toggle_footer_url_2}}<a
+              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_2'}}{{else}}{{settings.footer_url_link_2}}{{/if}}"
+              class="custom-link">{{#if
+              settings.dc_toggle}}{{dc'footer_url_title_2'}}{{else}}{{settings.footer_url_title_2}}{{/if}}</a>{{/if}}
+            {{#if settings.toggle_footer_url_3}}<a
+              href="{{#if settings.dc_toggle}}{{dc 'footer_url_link_3'}}{{else}}{{settings.footer_url_link_3}}{{/if}}"
+              class="custom-link">{{#if
+              settings.dc_toggle}}{{dc'footer_url_title_3'}}{{else}}{{settings.footer_url_title_3}}{{/if}}</a>{{/if}}
+          </div>
+          <div class="social-col">
+            {{#if settings.toggle_facebook_icon}}
+            <a href="{{#if settings.dc_toggle}}{{dc 'facebook_url'}}{{else}}{{settings.facebook_url}}{{/if}}"
+              target="_blank" class="footer-social-link fab fa-facebook"></a>
+            {{/if}}
+            {{#if settings.toggle_twitter_icon}}
+            <a href="{{#if settings.dc_toggle}}{{dc 'twitter_url'}}{{else}}{{settings.twitter_url}}{{/if}}"
+              target="_blank" class="footer-social-link fab fa-twitter"></a>
+            {{/if}}
+            {{#if settings.toggle_youtube_icon}}
+            <a href="{{#if settings.dc_toggle}}{{dc 'youtube_url'}}{{else}}{{settings.youtube_url}}{{/if}}"
+              target="_blank" class="footer-social-link fab fa-youtube"></a>
+            {{/if}}
+            {{#if settings.toggle_pinterest_icon}}
+            <a href="{{#if settings.dc_toggle}}{{dc 'pinterest_url'}}{{else}}{{settings.pinterest_url}}{{/if}}"
+              target="_blank" class="footer-social-link fab fa-pinterest"></a>
+            {{/if}}
+            {{#if settings.toggle_instagram_icon}}
+            <a href="{{#if settings.dc_toggle}}{{dc 'instagram_url'}}{{else}}{{settings.instagram_url}}{{/if}}"
+              target="_blank" class="footer-social-link fab fa-instagram"></a>
+            {{/if}}
+          </div>
+        </div>
+      </div> --}}
+    </div>
+  </footer>
+</div>
+</div>
+
+<button class="back-to-top fa fa-angle-up" data-back-to-top></button>

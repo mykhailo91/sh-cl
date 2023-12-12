@@ -1,0 +1,182 @@
+<script>$('#site-header').show();</script>
+<div class="container">
+  <div class="container-wrapper">
+
+    <div class="row clearfix">
+      <div class="col col-sm-8">
+        {{breadcrumbs}}
+        <p class="request-id">{{t 'request' request_number=request.id}}</p>
+
+        <h1 class="request-subject">{{request.subject}}</h1>
+      </div>
+    </div>
+
+    <div class="request-container">
+      <section class="request-col">
+        {{satisfaction}}
+
+        <div class="comments" id="comments">
+
+          <ul class="comments-list">
+            {{#each comments}}
+            <li class="comment" id="{{anchor}}">
+
+              <div class="comment-wrapper">
+                <div class="comment-content">
+                  <div class="meta-info comment-header">
+                    <div class="meta-info-avatar">
+                      <div class="avatar {{#if author.agent}}avatar-agent{{/if}}">
+                        <img class="user-avatar user-avatar--default" src="{{author.avatar_url}}" alt="Avatar">
+                      </div>
+                    </div>
+                    <div class="meta-info-content">
+                      <b class="author">
+                        {{#link 'user_profile' id=author.id}}
+                        {{author.name}}
+                        {{/link}}
+                      </b>
+                      <div class="meta">
+                        {{date created_at}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="comment-body">{{body}}</div>
+                  {{#if attachments}}
+                  <ul class="list-unstyled attachment-item">
+                    {{#each attachments}}
+                    <li class="attachment-items">
+                      <span class="fa fa-paperclip attachment-item-icon"></span>
+                      <a href="{{url}}" target="_blank">{{name}}</a>
+                      <div class="meta">({{size}})</div>
+                    </li>
+                    {{/each}}
+                  </ul>
+                  {{/if}}
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+
+          {{pagination}}
+
+        </div>
+
+
+        <p class="request-follow-up">{{comment_callout}}</p>
+
+        {{#form 'comment' class='comment-form-request'}}
+        <div class="comment-avatar">
+          <div class="avatar avatar--comment">
+            {{user_avatar class='user-avatar user-avatar--default'}}
+          </div>
+        </div>
+        <div class="comment-body">
+          {{#if help_center.request_ccs_enabled}}
+          <div class="comment-ccs">
+            {{token_field 'ccs'}}
+          </div>
+          {{/if}}
+          {{wysiwyg 'body' rows='7'}}
+        </div>
+        <div class="comment-attachments">
+          {{upload}}
+        </div>
+        <div class="comment-controls">
+          <div class="comment-mark-as-solved">
+            {{checkbox 'mark_as_solved'}}
+            {{label 'mark_as_solved'}}
+          </div>
+          {{input type='submit'}}
+        </div>
+        {{/form}}
+      </section>
+      <div class="request-sidebar">
+        <p><b>{{t 'submitted_by' requester_name=request.requester.name}}</b></p>
+
+        <dl class="request-details">
+          <dt>{{t 'created'}}</dt>
+          <dd>{{date request.created_at}}</dd>
+
+          <dt>{{t 'last_activity'}}</dt>
+          <dd>{{date request.updated_at}}</dd>
+
+          {{#form 'organization' id='request-organization'}}
+          <dt>{{t 'organization'}}</dt>
+          <dd>{{select 'organization'}}</dd>
+          {{/form}}
+
+          {{#if group}}
+          <dt>{{t 'group'}}</dt>
+          <dd>
+            <span>{{group.name}}</span>
+          </dd>
+          {{/if}}
+
+          <dt>{{t 'status'}}</dt>
+          <dd>
+            <span class="request-status-label request-status-label-{{request.status}}" title="{{request.status_description}}">
+              {{request.status_name}}
+            </span>
+          </dd>
+
+          {{#if request.type}}
+          <dt>{{t 'type'}}</dt>
+          <dd>
+            <span>
+              {{request.type_name}}
+              {{#is request.type 'task'}}{{t 'task_due_date' due_date=request.due_date}}{{/is}}
+            </span>
+          </dd>
+          {{/if}}
+
+          {{#if request.priority}}
+          <dt>{{t 'priority'}}</dt>
+          <dd>
+            <span>{{request.priority_name}}</span>
+          </dd>
+          {{/if}}
+
+          {{#if assignee}}
+          <dt>{{t 'assignee'}}</dt>
+          <dd>
+            <span>{{assignee.name}}</span>
+          </dd>
+          {{/if}}
+
+          {{#each custom_fields}}
+          <dt>{{title}}</dt>
+          <dd>
+            <span>{{value}}</span>
+          </dd>
+          {{/each}}
+
+          {{#if attachments}}
+          <ul class="list-unstyled attachment-item">
+            {{#each attachments}}
+            <li class="attachment-items">
+              <span class="fa fa-paperclip attachment-item-icon"></span>
+              <a href="{{url}}" target="_blank">{{name}}</a>
+              <div class="meta">({{size}})</div>
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+
+          {{#if collaborators}}
+          <dt>{{t 'ccs'}}</dt>
+          <dd>
+            <span>{{t 'ccs_description'}}</span>
+            <ul class="list-unstyled">
+              {{#each collaborators}}
+              <li>{{name}}</li>
+              {{/each}}
+            </ul>
+          </dd>
+          {{/if}}
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
