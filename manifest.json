@@ -1,0 +1,1699 @@
+{
+  "name": "Shark US - 20231123 (New Robot Section)",
+  "author": "Solafid Solutions",
+  "version": "1.2.6",
+  "api_version": 2,
+  "settings": [
+    {
+      "label": "Multi-language",
+      "variables": [
+        {
+          "identifier": "dc_toggle",
+          "type": "checkbox",
+          "description": "Enable this option to use dynamic translations",
+          "label": "Enable dynamic content translations",
+          "value": false
+        },
+        {
+          "identifier": "search_placeholder_text",
+          "type": "text",
+          "description": "Text for search placeholder",
+          "label": "Search placeholder",
+          "value": "Search by item or model #"
+        }
+      ]
+    },
+    {
+      "label": "Logo",
+      "variables": [
+        {
+          "identifier": "logo",
+          "type": "file",
+          "description": "Company logo",
+          "label": "Logo"
+        },
+        {
+          "identifier": "logo_secondary",
+          "type": "file",
+          "description": "Company logo",
+          "label": "Secondary logo"
+        },
+        {
+          "identifier": "logo_height",
+          "type": "range",
+          "description": "Height of the logo",
+          "label": "Logo height",
+          "value": 60,
+          "min": 10,
+          "max": 60
+        },
+        {
+          "identifier": "favicon",
+          "type": "file",
+          "description": "Icon displayed in the address bar of your browser",
+          "label": "Favicon"
+        },
+        {
+          "identifier": "footer_logo",
+          "type": "file",
+          "description": "Footer Logo",
+          "label": "Footer Logo"
+        },
+        {
+          "identifier": "footer_logo_height",
+          "type": "range",
+          "description": "Footer Logo Height",
+          "label": "Adjust footer logo height",
+          "value": 27,
+          "min": 24,
+          "max": 64
+        }
+      ]
+    },
+    {
+      "label": "Colors",
+      "variables": [
+        {
+          "identifier": "body_background_color",
+          "type": "color",
+          "description": "Background color of your Help Center",
+          "label": "Background color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "light_background_color",
+          "type": "color",
+          "description": "Color of your light background on homepage",
+          "label": "Light background color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "text_color",
+          "type": "color",
+          "description": "Text color for body and heading elements",
+          "label": "Text color",
+          "value": "rgba(6, 6, 6, 1)"
+        },
+        {
+          "identifier": "link_color",
+          "type": "color",
+          "description": "Text color for link elements",
+          "label": "Link color",
+          "value": "rgba(235, 14, 106, 1)"
+        },
+        {
+          "identifier": "hover_color",
+          "type": "color",
+          "description": "Text color for hover elements",
+          "label": "Hover color",
+          "value": "rgba(119, 67, 164, 1)"
+        },
+        {
+          "identifier": "button_color",
+          "type": "color",
+          "description": "Color for the buttons",
+          "label": "Button color",
+          "value": "rgba(235, 14, 106, 1)"
+        },
+        {
+          "identifier": "shadow_color",
+          "type": "color",
+          "description": "Color for major shadow on helpcenter",
+          "label": "Shadow color",
+          "value": "rgba(220, 220, 220, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Font & Border Style",
+      "variables": [
+        {
+          "identifier": "body_font_size",
+          "type": "text",
+          "description": "Size for body text",
+          "label": "Text size",
+          "value": "16px"
+        },
+        {
+          "identifier": "body_font_family",
+          "type": "list",
+          "description": "Font for body text",
+          "label": "Text font",
+          "value": "'Proxima Nova'",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Open Sans",
+              "value": "'Open Sans', sans-serif"
+            },
+            {
+              "label": "Roboto",
+              "value": "'Roboto', sans-serif"
+            },
+            {
+              "label": "Lato",
+              "value": "'Lato', sans-serif"
+            },
+            {
+              "label": "Slabo",
+              "value": "'Slabo 27px', serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Proxima Nova",
+              "value": "'Proxima Nova'"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "body_line_height",
+          "type": "text",
+          "description": "Space between the lines of text",
+          "label": "Text line height",
+          "value": "1.5"
+        },
+        {
+          "identifier": "article_header_font_family",
+          "type": "list",
+          "description": "Font for articles header text",
+          "label": "Article header font",
+          "value": "Helvetica, Arial, sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Open Sans",
+              "value": "'Open Sans', sans-serif"
+            },
+            {
+              "label": "Roboto",
+              "value": "'Roboto', sans-serif"
+            },
+            {
+              "label": "Lato",
+              "value": "'Lato', sans-serif"
+            },
+            {
+              "label": "Slabo",
+              "value": "'Slabo 27px', serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "border_radius_px",
+          "type": "text",
+          "description": "Border radius for buttons, text field, etc.",
+          "label": "Border radius",
+          "value": "1px"
+        },
+        {
+          "identifier": "border_width_px",
+          "type": "text",
+          "description": "Border width for buttons",
+          "label": "Border width",
+          "value": "1px"
+        }
+      ]
+    },
+    {
+      "label": "Info Notification",
+      "variables": [
+        {
+          "identifier": "info_notification_toggle",
+          "type": "checkbox",
+          "description": "Show or hide info notification",
+          "label": "Info Notification Toggle",
+          "value": true
+        },
+        {
+          "identifier": "info_notification_expiry",
+          "type": "text",
+          "description": "LocalStorage session expiry for info notification",
+          "label": "LocalStorage expiry time (hour)",
+          "value": "168"
+        },
+        {
+          "identifier": "info_font_size",
+          "type": "text",
+          "description": "Size for info notification",
+          "label": "Font size",
+          "value": "24px"
+        },
+        {
+          "identifier": "info_notification_timeout",
+          "type": "text",
+          "description": "Timeout for carousel autoplay",
+          "label": "Carousel Timeout",
+          "value": "3000"
+        },
+        {
+          "identifier": "info_notification_body_1",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Title",
+          "value": "CHECK OUT OUR PROMOTIONS |"
+        },
+        {
+          "identifier": "info_notification_link_1",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 1",
+          "value": "Shop now"
+        },
+        {
+          "identifier": "info_notification_url_1",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 1",
+          "value": "https://sharkclean.com/"
+        },
+        {
+          "identifier": "info_notification_body_2",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Title",
+          "value": ""
+        },
+        {
+          "identifier": "info_notification_link_2",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 2",
+          "value": ""
+        },
+        {
+          "identifier": "info_notification_url_2",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 2",
+          "value": ""
+        },
+        {
+          "identifier": "info_notification_body_3",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Title",
+          "value": "CHECK YOUR ORDER STATUS | "
+        },
+        {
+          "identifier": "info_notification_link_3",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 3",
+          "value": "Here"
+        },
+        {
+          "identifier": "info_notification_url_3",
+          "type": "text",
+          "description": " ",
+          "label": "Info Notification Link 3",
+          "value": "https://www.sharkclean.com/myaccount/orderstatus/?_ga=2.165220219.516086089.1668525423-351653345.1668525423"
+        },
+        {
+          "identifier": "info_notification_bg_color",
+          "type": "color",
+          "description": "Color for info notification background",
+          "label": "Info Notification Background Color",
+          "value": "rgba(0, 0, 0, 1)"
+        },
+        {
+          "identifier": "info_notification_text_color",
+          "type": "color",
+          "description": "Color for info notification text",
+          "label": "Info Notification Text Color",
+          "value": "rgba(255, 255, 255, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Header Components",
+      "variables": [
+        {
+          "identifier": "sign_in_toggle",
+          "type": "checkbox",
+          "description": "Show or hide sign in button",
+          "label": "Sign In Toggle",
+          "value": false
+        },
+        {
+          "identifier": "header_text_color",
+          "type": "color",
+          "description": "Header text color",
+          "label": "Header text color",
+          "value": "rgba(25, 17, 11, 1)"
+        },
+        {
+          "identifier": "header_button_color",
+          "type": "color",
+          "description": "Header button & link color",
+          "label": "Header button & link color",
+          "value": "rgba(176, 176, 176, 1)"
+        },
+        {
+          "identifier": "header_background_color",
+          "type": "color",
+          "description": "Header background color",
+          "label": "Header background color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "header_url_title_1",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title",
+          "value": "My Account"
+        },
+        {
+          "identifier": "header_url_link_1",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link",
+          "value": "https://www.sharkclean.com/login?_ga=2.234757719.89548476.1650075915-1108144034.1650075915"
+        },
+        {
+          "identifier": "header_url_title_2",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title 2",
+          "value": "Order Status"
+        },
+        {
+          "identifier": "header_url_link_2",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link 2",
+          "value": "https://www.sharkclean.com/myaccount/orderstatus/"
+        },
+        {
+          "identifier": "header_url_title_3",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title 3",
+          "value": "Register My Warranty"
+        },
+        {
+          "identifier": "header_url_link_3",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link 3",
+          "value": "https://www.sharkclean.com/register/guarantee?_ga=2.234757719.89548476.1650075915-1108144034.1650075915"
+        },
+        {
+          "identifier": "header_url_title_4",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title 4",
+          "value": "Parts & Accessories"
+        },
+        {
+          "identifier": "header_url_link_4",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link 4",
+          "value": "https://www.sharkclean.com/find-parts"
+        },
+        {
+          "identifier": "header_url_title_5",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title 5",
+          "value": "Contact Us"
+        },
+        {
+          "identifier": "header_url_link_5",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link 5",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/articles/11411207505436"
+        },
+        {
+          "identifier": "header_url_title_6",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Title 6",
+          "value": "Back to shop"
+        },
+        {
+          "identifier": "header_url_link_6",
+          "type": "text",
+          "description": " ",
+          "label": "Header Custom URL Link 6",
+          "value": "https://www.sharkclean.com/?_ga=2.234757719.89548476.1650075915-1108144034.1650075915"
+        }
+      ]
+    },
+    {
+      "label": "Hero Components",
+      "variables": [
+        {
+          "identifier": "hero_unit_mask_bg_color",
+          "type": "color",
+          "description": "Banner mask color",
+          "label": "Banner mask color",
+          "value": "rgba(7, 7, ,7, 1)"
+        },
+        {
+          "identifier": "hero_unit_mask_opacity",
+          "type": "text",
+          "description": "Banner mask opacity",
+          "label": "Banner mask opacity",
+          "value": "0.3"
+        },
+        {
+          "identifier": "hero_unit_bottom_gradient",
+          "type": "checkbox",
+          "description": "Show or hide Hero unit bottom gradient",
+          "label": "Hero unit bottom gradient",
+          "value": true
+        },
+        {
+          "identifier": "hero_image_file",
+          "type": "file",
+          "description": "The recommended dimensions: 1600x1100px",
+          "label": "Banner image"
+        },
+        {
+          "identifier": "hero_banner_gradient_toggle",
+          "type": "checkbox",
+          "description": "Enable hero banner gradient background",
+          "label": "Hero banner gradient background",
+          "value": false
+        },
+        {
+          "identifier": "hero_banner_gradient_value_1",
+          "type": "color",
+          "description": "First value of the gradient",
+          "label": "Hero banner gradient value 1",
+          "value": "#dedad9"
+        },
+        {
+          "identifier": "hero_banner_gradient_value_2",
+          "type": "color",
+          "description": "First value of the gradient",
+          "label": "Hero banner gradient value 2",
+          "value": "rgba(181, 60, 100, 0.01)"
+        },
+        {
+          "identifier": "hero_homepage_height",
+          "type": "range",
+          "description": "Adjust hero banner height",
+          "label": "Hero banner height",
+          "value": 60,
+          "min": 32,
+          "max": 150
+        },
+        {
+          "identifier": "hero_title_text",
+          "type": "text",
+          "description": "Text above the search field",
+          "label": "Hero unit title",
+          "value": "How can we help?"
+        },
+        {
+          "identifier": "hero_title_color",
+          "type": "color",
+          "description": "Color of hero title",
+          "label": "Hero unit title color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "hero_font_size",
+          "type": "text",
+          "description": "Size for hero title",
+          "label": "Hero unit title font size",
+          "value": "50px"
+        }
+      ]
+    },
+    {
+      "label": "Hero Carousel",
+      "variables": [
+        {
+          "identifier": "hero_carousel",
+          "type": "checkbox",
+          "description": "Toggle carousel for hero",
+          "label": "Show hero carousel",
+          "value": false
+        },
+        {
+          "identifier": "hero_carousel_autoplay",
+          "type": "checkbox",
+          "description": "Toggle carousel autoplay",
+          "label": "Autoplay",
+          "value": false
+        },
+        {
+          "identifier": "hero_carousel_timeout",
+          "type": "text",
+          "description": "In miliseconds",
+          "label": "Autoplay timeout",
+          "value": "5000"
+        },
+        {
+          "identifier": "hero_carousel_text_1",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Text 1",
+          "value": "This is title 1"
+        },
+        {
+          "identifier": "hero_carousel_desc_1",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Description 1",
+          "value": "This is considered a long text for carousel description placeholder 1"
+        },
+        {
+          "identifier": "hero_carousel_btn_1",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button 1",
+          "value": "Click me"
+        },
+        {
+          "identifier": "hero_carousel_btn_link_1",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button Link 1",
+          "value": "#"
+        },
+        {
+          "identifier": "hero_carousel_image_1",
+          "type": "file",
+          "description": " ",
+          "label": "Carousel Background 1"
+        },
+        {
+          "identifier": "hero_carousel_text_2",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Text 2",
+          "value": "This is title 2"
+        },
+        {
+          "identifier": "hero_carousel_desc_2",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Description 2",
+          "value": "This is considered a long text for carousel description placeholder 2"
+        },
+        {
+          "identifier": "hero_carousel_btn_2",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button 2",
+          "value": "Click me"
+        },
+        {
+          "identifier": "hero_carousel_btn_link_2",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button Link 2",
+          "value": "#"
+        },
+        {
+          "identifier": "hero_carousel_image_2",
+          "type": "file",
+          "description": " ",
+          "label": "Carousel Background 2"
+        },
+        {
+          "identifier": "hero_carousel_text_3",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Text 3",
+          "value": "This is title 3"
+        },
+        {
+          "identifier": "hero_carousel_desc_3",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Description 3",
+          "value": "This is considered a long text for carousel description placeholder 3"
+        },
+        {
+          "identifier": "hero_carousel_btn_3",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button 3",
+          "value": "Click me"
+        },
+        {
+          "identifier": "hero_carousel_btn_link_3",
+          "type": "text",
+          "description": " ",
+          "label": "Carousel Button Link 3",
+          "value": "#"
+        },
+        {
+          "identifier": "hero_carousel_image_3",
+          "type": "file",
+          "description": " ",
+          "label": "Carousel Background 3"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Components",
+      "variables": [
+        {
+          "identifier": "show_information_box",
+          "type": "checkbox",
+          "description": "Show or hide Information Box",
+          "label": "Information Box Toggle",
+          "value": true
+        },
+        {
+          "identifier": "show_new_request_link_toggle",
+          "type": "checkbox",
+          "description": "Show or hide submit a request link in navigation bar",
+          "label": "New Request Toggle",
+          "value": true
+        },
+        {
+          "identifier": "promoted_articles_style",
+          "type": "list",
+          "description": "Layout style for promoted articles",
+          "label": "Promoted articles style",
+          "value": "column",
+          "options": [
+            {
+              "label": "Accordion",
+              "value": "accordion"
+            },
+            {
+              "label": "Column",
+              "value": "column"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            }
+          ]
+        },
+        {
+          "identifier": "show_recent_activity_toggle",
+          "type": "checkbox",
+          "description": "Show or hide recent activity",
+          "label": "Recent activity",
+          "value": false
+        },
+        {
+          "identifier": "show_categories_toggle",
+          "type": "checkbox",
+          "description": "Show or hide category blocks",
+          "label": "Category blocks",
+          "value": false
+        },
+        {
+          "identifier": "category_ids",
+          "type": "text",
+          "description": " ",
+          "label": "Category id to be hidden",
+          "value": "360003232600,4402873069074,4402873078290"
+        }
+      ]
+    },
+    {
+      "label": "Information Box components",
+      "variables": [
+        {
+          "identifier": "info_box_carousel_autoplay",
+          "type": "checkbox",
+          "description": " ",
+          "label": "Carousel autoplay Toggle",
+          "value": true
+        },
+        {
+          "identifier": "info_box_carousel_timeout",
+          "type": "text",
+          "description": "Timeout for carousel autoplay",
+          "label": "Carousel timeout",
+          "value": "5000"
+        },
+        {
+          "identifier": "info_box_background",
+          "type": "color",
+          "description": " ",
+          "label": "Information box background color",
+          "value": "rgba(119, 67, 164, 1)"
+        },
+        {
+          "identifier": "info_box_text_color",
+          "type": "color",
+          "description": " ",
+          "label": "Information box text color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "info_box_border_color",
+          "type": "color",
+          "description": " ",
+          "label": "Information box border color",
+          "value": "rgba(255, 255, 255, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Hero Banner",
+      "variables": [
+        {
+          "identifier": "homepage_info_title_1",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner title 1",
+          "value": ""
+        },
+        {
+          "identifier": "homepage_info_link_1",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner link 1",
+          "value": ""
+        },
+        {
+          "identifier": "homepage_info_title_2",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner title 2",
+          "value": ""
+        },
+        {
+          "identifier": "homepage_info_link_2",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner link 2",
+          "value": ""
+        },
+        {
+          "identifier": "homepage_info_title_3",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner title 3",
+          "value": "FIND PARTS & ACCESSORIES | Here"
+        },
+        {
+          "identifier": "homepage_info_link_3",
+          "type": "text",
+          "description": " ",
+          "label": "Homepage hero banner link 3",
+          "value": "https://www.sharkclean.com/parts-and-accessories/find-model-number/"
+        }
+      ]
+    },
+    {
+      "label": "Category / Section Banner 1",
+      "variables": [
+        {
+          "identifier": "category_name_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner 1 name",
+          "value": "Air Purifiers"
+        },
+        {
+          "identifier": "category_info_title_1_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 1",
+          "value": "Find Your Air Purifier Replacement Filters Here"
+        },
+        {
+          "identifier": "category_info_link_1_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 1",
+          "value": "https://www.sharkclean.com/parts-and-accessories/"
+        },
+        {
+          "identifier": "category_info_title_1_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_1_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_title_1_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 3",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_1_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 3",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Category / Section Banner 2",
+      "variables": [
+        {
+          "identifier": "category_name_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner 2 name",
+          "value": "Vacuums"
+        },
+        {
+          "identifier": "category_info_title_2_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 1",
+          "value": "PARTS & ACESSORIES | Here"
+        },
+        {
+          "identifier": "category_info_link_2_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 1",
+          "value": "https://www.sharkclean.com/parts-and-accessories/model-number/"
+        },
+        {
+          "identifier": "category_info_title_2_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 2",
+          "value": "REGISTER YOUR PRODUCT | Here "
+        },
+        {
+          "identifier": "category_info_link_2_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 2",
+          "value": "https://www.sharkclean.com/register/guarantee?_ga=2.234757719.89548476.1650075915-1108144034.1650075915"
+        },
+        {
+          "identifier": "category_info_title_2_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 3",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_2_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 3",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Category / Section Banner 3",
+      "variables": [
+        {
+          "identifier": "category_name_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner 3 name",
+          "value": "Hair Care"
+        },
+        {
+          "identifier": "category_info_title_3_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 1",
+          "value": "Find Styling Tips on Shark BEAUTY"
+        },
+        {
+          "identifier": "category_info_link_3_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 1",
+          "value": "https://www.sharkclean.com/shark-beauty/styling-tips?_ga=2.15716913.601253584.1668962874-1260388521.1668453308"
+        },
+        {
+          "identifier": "category_info_title_3_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_3_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_title_3_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 3",
+          "value": "FIND SHARK FLEXSTYLE & HYPERAIR ACCESSORIES |  Here"
+        },
+        {
+          "identifier": "category_info_link_3_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 3",
+          "value": "https://www.sharkclean.com/parts-and-accessories/find-model-number/"
+        }
+      ]
+    },
+    {
+      "label": "Category / Section Banner 4",
+      "variables": [
+        {
+          "identifier": "category_name_4",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner 4 name",
+          "value": "Robots"
+        },
+        {
+          "identifier": "category_info_title_4_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 4",
+          "value": "EVERYTHING YOU NEED TO KNOW ABOUT YOUR ROBOT APP |  Here"
+        },
+        {
+          "identifier": "category_info_link_4_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 1",
+          "value": "https://support.sharkclean.com/hc/en-us/sections/6715914447644-SharkClean-App"
+        },
+        {
+          "identifier": "category_info_title_4_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 2",
+          "value": "SETTING UP THE SHARKCLEAN APP | Here"
+        },
+        {
+          "identifier": "category_info_link_4_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 2",
+          "value": "https://support.sharkclean.com/hc/en-us/articles/6697662779420"
+        },
+        {
+          "identifier": "category_info_title_4_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 3",
+          "value": "SHARKNINJA  WEBSITES VS. FAKE WEBSITES- Details Here"
+        },
+        {
+          "identifier": "category_info_link_4_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 3",
+          "value": "https://support.sharkclean.com/hc/en-us/articles/10996216788124"
+        }
+      ]
+    },
+    {
+      "label": "Category / Section Banner 5",
+      "variables": [
+        {
+          "identifier": "category_name_5",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner 1 name",
+          "value": "Carpet Cleaners"
+        },
+        {
+          "identifier": "category_info_title_5_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 1",
+          "value": "Shark® CarpetXpert™ How-To Videos | HERE"
+        },
+        {
+          "identifier": "category_info_link_5_1",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 1",
+          "value": "https://support.sharkclean.com/hc/en-us/sections/9955258254748-Carpet-Cleaners"
+        },
+        {
+          "identifier": "category_info_title_5_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_5_2",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 2",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_title_5_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner title 3",
+          "value": ""
+        },
+        {
+          "identifier": "category_info_link_5_3",
+          "type": "text",
+          "description": " ",
+          "label": "Category / section banner link 3",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Custom Blocks Icons",
+      "variables": [
+        {
+          "identifier": "custom_block_bg_color",
+          "type": "color",
+          "description": "Background color of the custom block",
+          "label": "Custom blocks background color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "custom_block_icon_height",
+          "type": "range",
+          "description": "Height of the Custom Block icons",
+          "label": "Icon height",
+          "value": 175,
+          "min": 30,
+          "max": 175
+        },
+        {
+          "identifier": "custom_block_border",
+          "type": "color",
+          "description": "Color of custom block border",
+          "label": "Border color",
+          "value": "rgba(0, 0, 0, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 1",
+      "variables": [
+        {
+          "identifier": "custom_block_1_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_1_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_1_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Shark Products Information & Support"
+        },
+        {
+          "identifier": "custom_block_1_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/categories/360003232600-Product-Information-FAQs"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 2",
+      "variables": [
+        {
+          "identifier": "custom_block_2_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_2_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_2_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Shark Robot Product Information & Support"
+        },
+        {
+          "identifier": "custom_block_2_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/sections/4405399628562-Robots"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 3",
+      "variables": [
+        {
+          "identifier": "custom_block_3_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_3_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_3_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Shark Haircare Product Information & Support"
+        },
+        {
+          "identifier": "custom_block_3_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/sections/4407201386386-Hair-Care"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 4",
+      "variables": [
+        {
+          "identifier": "custom_block_4_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": false
+        },
+        {
+          "identifier": "custom_block_4_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_4_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Troubleshooting"
+        },
+        {
+          "identifier": "custom_block_4_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/categories/4402873069074-Troubleshooting"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 5",
+      "variables": [
+        {
+          "identifier": "custom_block_5_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_5_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_5_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Order Status / Delivery"
+        },
+        {
+          "identifier": "custom_block_5_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/articles/4401983044764-Order-Status"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 6",
+      "variables": [
+        {
+          "identifier": "custom_block_6_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_6_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 100x100px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_6_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Warranty & Returns"
+        },
+        {
+          "identifier": "custom_block_6_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/categories/4402873078290-Warranty-Returns"
+        }
+      ]
+    },
+    {
+      "label": "Video Section",
+      "variables": [
+        {
+          "identifier": "videos_toggle",
+          "type": "checkbox",
+          "description": "Show or hide video blocks",
+          "label": "Toggle video blocks",
+          "value": true
+        },
+        {
+          "identifier": "video_section_title",
+          "type": "text",
+          "description": " ",
+          "label": "Video Section Title",
+          "value": "How to Videos"
+        },
+        {
+          "identifier": "video_id_arrays",
+          "type": "text",
+          "description": " ",
+          "label": "Video IDs",
+          "value": "lvtkzx3d5u4,nsu8bZIXgIc,uGGahYitLg4,eKrRbEIwFCA,mJUaAF9R920,2DdIw_P0-W4,sU2z804hgRs,AfSRrnyew20,k2vqOE4lBD0,ePpEgE50QKc,ZFKFama5xko,ROL2TYmvspY,asDvVUaZkJQ,Oe7oej2W0oA,VP6NMclbmUM,WBeao3XLVD8,RpZVM2XsdTk,t73eRQ7kSu4,oadnw2LOER4,HDwspXSrY_U,NiPdJAXNQK8,VOgVzwqFCPU,eNG28Uizvww&t=14s,aXclctY_QDY,P2sJz-q2Um8,Urzlquil0ug,4MKZocP4ZDE,RhqiEV-weWQ,g6Az1pPVus0,uHdi7OiGFQM,7ak2VGZxQII,NSwSRkq53eI,tj9-9GrghAU,UQWGtWwS2mY,l_XgrLJwLSA"
+        }
+      ]
+    },
+    {
+      "label": "Custom Video Block 1",
+      "variables": [
+        {
+          "identifier": "video_block_1",
+          "type": "checkbox",
+          "description": " ",
+          "label": "Video block 1",
+          "value": true
+        },
+        {
+          "identifier": "video_block_1_list",
+          "type": "list",
+          "description": " ",
+          "label": "Video source",
+          "value": "Other",
+          "options": [
+            {
+              "label": "Embed Video",
+              "value": "Embed Video"
+            },
+            {
+              "label": "Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "identifier": "video_block_1_id",
+          "type": "text",
+          "description": "Embed Video / Other URL",
+          "label": "Video URL",
+          "value": "https://www.youtube.com/c/SharkHome"
+        },
+        {
+          "identifier": "video_block_1_title",
+          "type": "text",
+          "description": "Your video title",
+          "label": "Video block 1 title",
+          "value": "See all videos"
+        },
+        {
+          "identifier": "video_block_1_img",
+          "type": "file",
+          "description": " ",
+          "label": "Video Block Thumbnail"
+        },
+        {
+          "identifier": "show_play_button_1",
+          "type": "checkbox",
+          "description": "Show or hide play button",
+          "label": "Toggle Play button",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Section page elements",
+      "variables": [
+        {
+          "identifier": "section_ids",
+          "type": "text",
+          "description": "Enter comma separated category names or sections names",
+          "label": "Product pages identifiers",
+          "value": "FAQs,Manuals,1-Year Limited Warranty,2-Year Limited Warranty,2-Year Limited Battery Warranty,2-Year VIP Battery Warranty,3-Year Limited Warranty,5-Year Limited Warranty,7-Year Limited Warranty,Lifetime VIP Warranty,60-Day Money Back Guarantee,90-Day Money Back Guarantee"
+        }
+      ]
+    },
+    {
+      "label": "Footer Components",
+      "variables": [
+        {
+          "identifier": "footer_background_color",
+          "type": "color",
+          "description": "Footer background color",
+          "label": "Background color",
+          "value": "rgba(255, 252, 250, 1)"
+        },
+        {
+          "identifier": "footer_text_color",
+          "type": "color",
+          "description": "Footer text color",
+          "label": "Text color",
+          "value": "rgba(0, 0, 0, 1)"
+        },
+        {
+          "identifier": "toggle_footer_copyright",
+          "type": "checkbox",
+          "description": " ",
+          "label": "Show footer copyright",
+          "value": true
+        },
+        {
+          "identifier": "footer_copyright",
+          "type": "text",
+          "description": "Input your copyrights Text here",
+          "label": "Copyright text",
+          "value": "Copyright © 2023 SharkNinja Operating LLC |"
+        },
+        {
+          "identifier": "toggle_copyright_link",
+          "type": "checkbox",
+          "description": " ",
+          "label": "Show copyright link",
+          "value": true
+        },
+        {
+          "identifier": "copyright_link_title",
+          "type": "text",
+          "description": " ",
+          "label": "Copyright link text",
+          "value": ""
+        },
+        {
+          "identifier": "copyright_link_url",
+          "type": "text",
+          "description": " ",
+          "label": "Copyright link URL",
+          "value": ""
+        },
+        {
+          "identifier": "footer_url_title_1",
+          "type": "text",
+          "description": " ",
+          "label": "Footer URL text 1",
+          "value": "Terms of Use"
+        },
+        {
+          "identifier": "footer_url_link_1",
+          "type": "text",
+          "description": "Url footer url 1 (Leave empty to hide)",
+          "label": "Footer URL 1",
+          "value": "https://www.sharkclean.com/terms-of-use/?_ga=2.75870231.305614368.1671547889-1287534030.1671547889"
+        },
+        {
+          "identifier": "footer_url_title_2",
+          "type": "text",
+          "description": " ",
+          "label": "Footer URL text 2",
+          "value": "Privacy Policy"
+        },
+        {
+          "identifier": "footer_url_link_2",
+          "type": "text",
+          "description": "Url footer url 2 (Leave empty to hide)",
+          "label": "Footer URL 2",
+          "value": "https://www.sharkclean.com/privacy-policy"
+        },
+        {
+          "identifier": "footer_url_title_3",
+          "type": "text",
+          "description": " ",
+          "label": "Footer URL text 3",
+          "value": "Exercise My Rights"
+        },
+        {
+          "identifier": "footer_url_link_3",
+          "type": "text",
+          "description": "Url footer url 3 (Leave empty to hide)",
+          "label": "Footer URL 3",
+          "value": "https://sharkninja-2.privacy.saymine.io/SharkNinja-2/en-US"
+        },
+        {
+          "identifier": "footer_url_title_4",
+          "type": "text",
+          "description": " ",
+          "label": "Footer URL text 4",
+          "value": "Accessibility"
+        },
+        {
+          "identifier": "footer_url_link_4",
+          "type": "text",
+          "description": "Url footer url 4 (Leave empty to hide)",
+          "label": "Footer URL 4",
+          "value": "https://www.sharkclean.com/page/accessibility"
+        },
+        {
+          "identifier": "footer_url_title_5",
+          "type": "text",
+          "description": " ",
+          "label": "Footer URL text 5",
+          "value": ""
+        },
+        {
+          "identifier": "footer_url_link_5",
+          "type": "text",
+          "description": "Url footer url 5 (Leave empty to hide)",
+          "label": "Footer URL 5",
+          "value": ""
+        },
+        {
+          "identifier": "footer_social_link_color",
+          "type": "color",
+          "description": "Footer social link color",
+          "label": "Social link color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "footer_social_link_bg_color",
+          "type": "color",
+          "description": "Footer social link background color",
+          "label": "Social link background color",
+          "value": "#7743a4"
+        },
+        {
+          "identifier": "footer_social_icon_height",
+          "type": "range",
+          "description": "Height of social icon",
+          "label": "Social media icon size",
+          "value": 15,
+          "min": 6,
+          "max": 30
+        }
+      ]
+    },
+    {
+      "label": "Footer social media links",
+      "variables": [
+        {
+          "identifier": "facebook_url",
+          "type": "text",
+          "description": "Url to Facebook account (Leave empty to hide)",
+          "label": "Facebook",
+          "value": "https://www.facebook.com/SharkCleaning"
+        },
+        {
+          "identifier": "twitter_url",
+          "type": "text",
+          "description": "Url to Twitter account (Leave empty to hide)",
+          "label": "Twitter",
+          "value": "https://twitter.com/SharkHomeUS"
+        },
+        {
+          "identifier": "youtube_url",
+          "type": "text",
+          "description": "Url to Youtube account (Leave empty to hide)",
+          "label": "Youtube",
+          "value": "https://www.youtube.com/user/Shark/"
+        },
+        {
+          "identifier": "pinterest_url",
+          "type": "text",
+          "description": "Url to pinterest account (Leave empty to hide)",
+          "label": "pinterest",
+          "value": "https://www.pinterest.com/sharkcleaning/"
+        },
+        {
+          "identifier": "instagram_url",
+          "type": "text",
+          "description": "Url to Instagram account (Leave empty to hide)",
+          "label": "Instagram",
+          "value": "https://www.instagram.com/sharkhome/"
+        },
+        {
+          "identifier": "tiktok_url",
+          "type": "text",
+          "description": "Url to tiktok account (Leave empty to hide)",
+          "label": "tiktok",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
