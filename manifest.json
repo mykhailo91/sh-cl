@@ -1,7 +1,7 @@
 {
   "name": "Shark US - 20231123 (New Robot Section)",
   "author": "Solafid Solutions",
-  "version": "2.1.0",
+  "version": "1.2.6",
   "api_version": 2,
   "settings": [
     {
@@ -1381,6 +1381,90 @@
           "description": "Show FAQ section variable",
           "label": "Show FAQ",
           "value": true
+        },
+        {
+          "identifier" :"faq_article_title_1",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 1",
+          "value": "Shark Refurbished Units - FAQs"
+        },
+        {
+          "identifier" :"faq_article_title_2",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 2",
+          "value": "Carpet Cleaners | How to Deep Clean and Stain Clean (Shark® CarpetXp, Text)"
+        },
+        {
+          "identifier" :"faq_article_title_3",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 3",
+          "value": "Instalment (pay monthly) FAQ's"
+        },
+        {
+          "identifier" :"faq_article_title_4",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 4",
+          "value": "Where can I purchase additional batteries for my cordless vacuum?"
+        },
+        {
+          "identifier" :"faq_article_title_5",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 5",
+          "value": "What makes our products so good at tackling pet hair?"
+        },
+        {
+          "identifier" :"faq_article_title_6",
+          "type":"text",
+          "description": "Faq article title",
+          "label": "Faq article 6",
+          "value": "Klarna Payment Consumer Information"
+        },
+        {
+          "identifier" :"faq_article_link_1",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 1",
+          "value": "https://www.zingtree.com/live/984790786/embed"
+        },
+        {
+          "identifier" :"faq_article_link_2",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 2",
+          "value": "https://www.zingtree.com/live/984790786/embed"
+        },
+        {
+          "identifier" :"faq_article_link_3",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 3",
+          "value": "https://www.zingtree.com/live/984790786/embed"
+        },
+        {
+          "identifier" :"faq_article_link_4",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 4",
+          "value": "https://www.zingtree.com/live/984790786/embed"
+        },
+        {
+          "identifier" :"faq_article_link_5",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 5",
+          "value": "https://www.zingtree.com/live/984790786/embed"
+        },
+        {
+          "identifier" :"faq_article_link_6",
+          "type":"text",
+          "description": "Faq article zingtree link",
+          "label": "Faq zingtree link 6",
+          "value": "https://www.zingtree.com/live/984790786/embed"
         }
       ]
     },

@@ -9,6 +9,7 @@
 }
 
 .section-container {
+  position: relative;
   width: 100%;
   padding: 64px 0;
 
@@ -20,15 +21,20 @@
     margin-bottom: 32px;
   }
 
-  .section-title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0.396px;
-  }
-
   .section-description {
     color: #333;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.396px;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
   }
 }
 
@@ -46,4 +52,41 @@
 
 .semi-bold {
   font-weight: 600;
+}
+
+.styled-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-color: #fff;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+  width: fit-content;
+  border: 1px solid #fff;
+  cursor: pointer;
+
+  .styled-button-icon {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &:active {
+    background-color: #fff;
+    color: #000;
+    opacity: 0.8;
+  }
+
+  &:active .styled-button-icon {
+    filter: invert(1);
+  }
+
+  &:hover .styled-button-icon {
+    filter: invert(1);
+  }
 }

@@ -1,17 +1,70 @@
-#faq-modal {
-  overflow: auto;
-
-  .modal-header {
-    border: 0;
-  }
+.jquery-modal.blocker {
+  z-index: 1000;
 
   @media screen and (max-width: 768px) {
-    .modal-dialog {
-      margin: 0;
+    /* border: 1px solid red; */
+    padding: 0;
+
+  }
+
+  #ex1 {
+    overflow: auto;
+    padding: 0;
+    min-height: fit-content;
+    min-width: 65vw;
+
+    .modal-header {
+      border: 0;
     }
 
-    .modal-content {
-      height: 100vh;
+    .modal-body {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      .modal-dialog {
+        margin: 0;
+      }
+
+      .modal-content {
+        height: 100vh;
+      }
     }
   }
 }
+
+/* body {
+  border: 1px solid red;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    background-clip: padding-box;
+    border: 0.2rem solid transparent;
+    border-radius: 10px;
+
+    :hover {
+      border: 0;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    margin: 0 4rem;
+
+    background: rgba(#000000, 0.3);
+    background-clip: padding-box;
+    border: 0.2rem solid transparent;
+    border-radius: 10px;
+
+    &:hover {
+      border: 0;
+    }
+} */

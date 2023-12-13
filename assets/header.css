@@ -1,0 +1,147 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+}
+
+.header-nav ul,
+.header-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    color: #222;
+}
+
+.header-nav ul {
+    display: flex;
+    align-self: center;
+}
+
+.header-nav ul:nth-child(2) {
+    gap: 32px;
+}
+
+.header-nav li {
+    list-style: none;
+}
+
+.header.scrolled {
+    background: #000;
+}
+
+.header.scrolled a {
+    color: #fff;
+}
+
+.header.scrolled .searchbar-info {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.search::before {
+    content: "";
+    background: url(http://localhost:4567/guide/assets/search.svg) no-repeat;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+}
+
+.header.scrolled .search::before {
+    bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+
+    .header-wrapper {
+        align-items: center;
+    }
+
+    .header.is-open .content-container {
+        background-color: #000;
+    }
+
+    #sidebar_mobile .container {
+        padding: 28px 16px;
+    }
+
+    #sidebar_mobile .sidebar_mobile_item {
+        font-family: Proxima Nova;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 133.333% */
+        letter-spacing: -0.45px;
+    }
+
+    #sidebar_mobile .sidebar_mobile_item a {
+        color: #000;
+    }
+
+    #sidebar_mobile .sidebar_mobile_list {
+        display: grid;
+        grid-gap: 24px;
+        padding: 24px 16px;
+    }
+
+    #sidebar_mobile input {
+        border: 1px solid #c0c0c0;
+    }
+
+    #sidebar_mobile .sidebar_search {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+    }
+
+    #sidebar_mobile .search-subtitle {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.154px;
+        margin: 0;
+        align-self: center;
+    }
+
+    .sidebar_mobile_menu {
+        background: #fff;
+    }
+
+    .sidebar_mobile_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .account-button {
+        display: flex;
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 20px;
+        text-transform: capitalize;
+        font-weight: 400;
+        width: fit-content;
+        cursor: pointer;
+        background: #000;
+        flex-direction: row-reverse;
+        gap: 4px;
+        align-items: normal;
+    }
+}

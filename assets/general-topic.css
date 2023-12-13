@@ -18,6 +18,7 @@
     gap: 16px;
     padding: 16px 24px;
     width: 100%;
+    justify-content: space-between;
 }
 .general-topic:hover {
     box-shadow: 0px 20px 28px 0px rgba(0, 0, 0, 0.15);
@@ -38,6 +39,10 @@
     justify-content: space-between;
 }
 
+.general-topic__action {
+    align-self: self-end;
+}
+
 @media screen and (max-width: 767.98px) {
     .general-topics {
         flex-direction: column;
@@ -48,6 +53,7 @@
         flex-direction: row;
         align-items: center;
         position: relative;
+        justify-content: flex-start;
     }
     .general-topic:not(:last-child) {
         margin-bottom: 12px;

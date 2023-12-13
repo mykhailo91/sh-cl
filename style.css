@@ -3,6 +3,7 @@
 :root {
   --spacing-16: 16px;
   --spacing-30: 30px;
+  --spacing-40: 40px;
 }
 /*=========================== NORMALIZE, RESET, & GLOBAL ELEMENTS */
 
@@ -54,7 +55,6 @@ p {
 }
 
 a {
-  color: $link_color;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -626,52 +626,14 @@ input[type="search"] {
   height: auto;
   padding: 6px 12px 6px 35px;
   font-size: 16px;
-  line-height: 48px;
-  color: $text_color;
-  background-color: rgba(248, 248, 255, 1);
-  background-image: none;
-  border: $border_width_px solid $button_color;
-  box-shadow: 0px 8px 16px 0 rgba(0, 62, 59, 0.12);
-  border-radius: $border_radius_px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-input[type="search"]:active {
-  border-color: $button_color;
+  border-radius: 20px;
 }
 
 .searchbar-top input[type="search"] {
   color: $text_color;
   background-color: rgba(248, 248, 255, 1);
-  padding: 19px 0;
-  width: 300px;
+  width: 384px;
   transition: all 0.3s ease-out;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .searchbar-top input[type="search"] {
-    width: 130px;
-  }
-}
-
-[dir="ltr"] .searchbar-top input[type="search"] {
-  padding-right: 5px;
-  padding-left: 40px;
-}
-
-[dir="rtl"] .searchbar-top input[type="search"] {
-  padding-right: 40px;
-  padding-left: 5px;
-}
-
-.searchbar-top input[type="search"]:focus {
-  width: 300px;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .searchbar-top input[type="search"]:focus {
-    width: 130px;
-  }
 }
 
 input[type="tel"] {
@@ -732,7 +694,6 @@ input[type="week"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
-input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .nesty-input:focus {
@@ -846,10 +807,6 @@ input[type="search"] {
 .container-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-header .container-wrapper {
-  max-width: unset;
 }
 
 .searchbar-top {
@@ -1864,18 +1821,11 @@ input[type="submit"]:active,
 
 .header {
   width: 100%;
-  height: auto;
   font-style: "Proxima Nova";
-  background-color: transparent;
-  border-color: $header_button_color;
-  border-style: solid;
   border-width: 0;
   position: absolute;
   top: 0;
   z-index: 126;
-  padding-bottom: 9px;
-  padding-top: 9px;
-  transition: all 0.3s ease-out;
 }
 
 .header.scrolled {
@@ -1896,10 +1846,6 @@ input[type="submit"]:active,
 
 .header span {
   color: $header_background_color;
-}
-
-.header.scrolled a {
-  color: $header_text_color !important;
 }
 
 .header.scrolled .sign-in {
@@ -2511,6 +2457,10 @@ input[type="submit"]:active,
 
 /*=========================== Homepage */
 
+.homepage-container {
+  position: relative;
+}
+
 .homepage-container h3 {
   margin-bottom: 30px;
   font-weight: 700;
@@ -2648,7 +2598,6 @@ input[type="submit"]:active,
 
 .content-container {
   padding: 20px var(--spacing-30);
-  background-color: $body_background_color;
 
   @media screen and (max-width: 768px) {
     padding: 20px var(--spacing-16);
@@ -3042,21 +2991,6 @@ pre {
 
 .search {
   position: relative;
-}
-
-.transparent input[type="search"] {
-  background-color: transparent;
-}
-
-.search:before {
-  display: inline-block;
-  margin-top: -12px;
-  color: lighten($text_color, 40%);
-  content: "";
-  background-image: url($assets-search-svg);
-  width: 24px;
-  height: 24px;
-  background-size: 100%;
 }
 
 [dir="rtl"] .search:before {
@@ -4918,7 +4852,7 @@ html[dir="rtl"] .notification-left-aligned {
 
 .back-to-top.is-active {
   bottom: 90px;
-  z-index: 99999999999999999;
+  z-index: 999;
   border-radius: 100%;
   right: 22px;
 }
@@ -6244,10 +6178,10 @@ aside.site-sidebar.light-bg {
 
 #sidebar_mobile {
   width: 100%;
-  height: calc(100% - 18px - (1px * $logo_height));
+  height: calc(100% - 12px - (1px * $logo_height));
   position: fixed;
   background-color: $body_background_color;
-  top: calc((1px * $logo_height) + 18px);
+  top: calc((1px * $logo_height) + 12px);
   left: 0;
   margin-top: -200vh;
   z-index: 124;
@@ -6273,23 +6207,6 @@ aside.site-sidebar.light-bg {
   height: calc(100% - 18px - (1px * $logo_height));
   background-color: $body_background_color;
   font-size: 14px;
-}
-
-.sidebar_mobile_list {
-  text-align: center;
-}
-
-.sidebar_mobile_item {
-  padding: 13px 0;
-  border-bottom: 1px solid #afafaf;
-}
-
-.sidebar_mobile_item a {
-  color: $header_text_color;
-}
-
-.sidebar_mobile_item:last-child {
-  border-bottom: unset;
 }
 
 .sidebar_mobile_footer {
@@ -7366,7 +7283,8 @@ aside.site-sidebar.py-6.light-bg.site-article button {
     float: none;
     display: block;
     align-items: center;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   [dir="rtl"] .header-panel {
@@ -7539,12 +7457,6 @@ section:empty {
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
-}
-
-.scrolled .nav-icon span,
-.header-has-background .nav-icon span,
-.is-open .nav-icon span {
-  background-color: $header_text_color;
 }
 
 .nav-icon span:nth-child(1) {
@@ -8387,22 +8299,30 @@ section:empty {
 
 .button-carousel {
   position: absolute;
-  top: 100px;
-  font-size: 60px;
+  top: 205px;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: #512e6d;
   font-weight: bold;
   color: $button_color;
   cursor: pointer;
-  left: 0%;
   z-index: 4;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .site-video-items::-webkit-scrollbar {
   visibility: hidden;
 }
 
+.button-carousel:nth-of-type(1) {
+  left: 0;
+}
+
 .button-carousel:nth-of-type(2) {
-  left: 96%;
-  text-align: right;
+  right: 0;
 }
 
 @media (max-width: 425px) {
@@ -8423,9 +8343,8 @@ section:empty {
 }
 
 .site-video-items {
-  width: 98%;
+  width: 100%;
   height: auto;
-  background: $body_background_color;
   display: flex;
   justify-content: left;
   overflow-x: auto;
@@ -8433,48 +8352,44 @@ section:empty {
 
 .site-video-item {
   display: block;
-  min-width: 238px;
+  min-width: 260px;
   position: relative;
   left: 0px;
   text-align: center;
-  font-size: 100px;
   font-weight: bold;
   color: $body_background_color;
-  margin: 10px 20px;
+  margin-right: 32px;
   transition: 0.5s all;
   cursor: pointer;
 }
 
 @media (max-width: 1024px) {
   .site-video-item {
-    min-width: 274px;
+    min-width: 260px;
   }
 }
 
 @media (max-width: 768px) {
   .site-video-item {
-    min-width: 309px;
+    min-width: 260px;
   }
 }
 
 @media (max-width: 425px) {
   .site-video-item {
-    min-width: 305px;
-    margin: 10px 30px;
+    min-width: 260px;
   }
 }
 
 @media (max-width: 375px) {
   .site-video-item {
     min-width: 255px;
-    margin: 10px 30px;
   }
 }
 
 @media (max-width: 325px) {
   .site-video-item {
     min-width: 205px;
-    margin: 10px 30px;
   }
 }
 
@@ -8496,43 +8411,31 @@ section:empty {
   position: relative;
   display: block;
   background-position: 50% 50%;
-  height: 150px;
+  height: 160px;
   background-size: cover;
 }
 
 .site-video-img.site-video-icon::before {
-  content: "\f04b";
+  content: url($assets-youtube-fill-big-svg);
   position: absolute;
+  width: 64px;
+  height: 64px;
   top: 50%;
   left: 50%;
-  width: 85px;
-  height: 55px;
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  padding: 8px 0 0 3px;
-  z-index: 3;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  border: 2px solid rgba(0, 0, 0, 0.6);
-  border-radius: 10%;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.55);
   transition: transform 0.7s ease;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .site-video-img:hover::before {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-  color: $hover_color;
-  border-color: $hover_color;
+  opacity: 0.9;
 }
 
 .site-video-title {
-  padding: 10px 20px;
+  padding-top: 8px;
   font-size: 15px;
   color: $text_color;
+  text-align: start;
 }
 
 .modal-open {

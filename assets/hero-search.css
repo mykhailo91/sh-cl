@@ -155,6 +155,10 @@
     .hero-item__search {
         padding-top: 82px;
     }
+
+    .hero-item__search .search {
+        width: -webkit-fill-available;
+    }
 }
 
 /*=========================== END OF HERO */

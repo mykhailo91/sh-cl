@@ -1,67 +1,169 @@
 <footer>
-  <img class="logo" src="{{asset 'shark-logo.svg'}}" alt="shark-logo"/>
-  <p class="copy">© 2024 SharkClean. All rights reserved.</p>
-  <div class="social">
-    {{#is settings.facebook_url ''}}
-    {{else}}
-      <a href="
-        {{#if settings.dc_toggle}}
-          {{dc 'facebook_url'}}
-        {{else}}
-          {{settings.facebook_url}}
-        {{/if}}
-        "target="_blank" class="social-link">
-          <img src="{{asset 'facebook-fill.svg'}}" alt="facebook-icon"/>
-      </a>
-    {{/is}}
-    {{#is settings.youtube_url ''}}
-    {{else}}
-      <a href="
-        {{#if settings.dc_toggle}}
-          {{dc 'youtube_url'}}
-        {{else}}
-          {{settings.youtube_url}}
-        {{/if}}"
-        target="_blank" class="social-link">
-          <img src="{{asset 'youtube-fill.svg'}}" alt="youtube-icon"/>
-      </a>
-    {{/is}}
-    {{#is settings.instagram_url ''}}
-    {{else}}
-      <a href="
-        {{#if settings.dc_toggle}}
-          {{dc 'instagram_url'}}
-        {{else}}
-          {{settings.instagram_url}}
-        {{/if}}"
-        target="_blank" class="social-link">
-          <img src="{{asset 'instagram-fill.svg'}}" alt="instagram-icon"/>
-      </a>
-    {{/is}}
-    {{#is settings.twitter_url ''}}
-    {{else}}
-      <a href="
-        {{#if settings.dc_toggle}}
-          {{dc 'twitter_url'}}
-        {{else}}
-          {{settings.twitter_url}}
-        {{/if}}"
-        target="_blank" class="social-link">
-          <img src="{{asset 'twiter-fill.svg'}}" alt="twitter-icon"/>
-      </a>
-    {{/is}}
-    {{#is settings.pinterest_url ''}}
-    {{else}}
-      <a href="
-        {{#if settings.dc_toggle}}
-          {{dc 'pinterest_url'}}
-        {{else}}
-          {{settings.pinterest_url}}
-        {{/if}}"
-        target="_blank" class="social-link">
-          <img src="{{asset 'pariscope-fill.svg'}}" alt="pinterest-icon"/>
-      </a>
-    {{/is}}
+  <div class="footer-section social-section">
+    <img class="logo" src="{{asset 'shark-logo.svg'}}" alt="shark-logo"/>
+    <p class="copy">© 2024 SharkClean. All rights reserved.</p>
+    <div class="social">
+      {{#is settings.facebook_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'facebook_url'}}
+          {{else}}
+            {{settings.facebook_url}}
+          {{/if}}
+          "target="_blank" class="social-link">
+            <img src="{{asset 'facebook-fill.svg'}}" alt="facebook-icon"/>
+        </a>
+      {{/is}}
+      {{#is settings.youtube_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'youtube_url'}}
+          {{else}}
+            {{settings.youtube_url}}
+          {{/if}}"
+          target="_blank" class="social-link">
+            <img src="{{asset 'youtube-fill.svg'}}" alt="youtube-icon"/>
+        </a>
+      {{/is}}
+      {{#is settings.instagram_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'instagram_url'}}
+          {{else}}
+            {{settings.instagram_url}}
+          {{/if}}"
+          target="_blank" class="social-link">
+            <img src="{{asset 'instagram-fill.svg'}}" alt="instagram-icon"/>
+        </a>
+      {{/is}}
+      {{#is settings.twitter_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'twitter_url'}}
+          {{else}}
+            {{settings.twitter_url}}
+          {{/if}}"
+          target="_blank" class="social-link">
+            <img src="{{asset 'twiter-fill.svg'}}" alt="twitter-icon"/>
+        </a>
+      {{/is}}
+      {{#is settings.pinterest_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'pinterest_url'}}
+          {{else}}
+            {{settings.pinterest_url}}
+          {{/if}}"
+          target="_blank" class="social-link">
+            <img src="{{asset 'pariscope-fill.svg'}}" alt="pinterest-icon"/>
+        </a>
+      {{/is}}
+      {{#is settings.tiktok_url ''}}
+      {{else}}
+        <a href="
+          {{#if settings.dc_toggle}}
+            {{dc 'tiktok_url'}}
+          {{else}}
+            {{settings.tiktok_url}}
+          {{/if}}"
+          target="_blank" class="social-link">
+            <img src="{{asset 'tiktok-fill.svg'}}" alt="tiktok-icon"/>
+        </a>
+      {{/is}}
+    </div>
+  </div>
+  <div class="footer-section">
+    <h4 class="footer-section-header">Products</h4>
+    <div class="footer-section-items">
+      {{#if settings.custom_block_1_toggle}}
+        <a href="{{settings.custom_block_1_url}}" class="footer-section-item">{{settings.custom_block_1_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_2_toggle}}
+        <a href="{{settings.custom_block_2_url}}" class="footer-section-item">{{settings.custom_block_2_title}}</a>
+      {{/if}}  
+      {{#if settings.custom_block_3_toggle}}
+        <a href="{{settings.custom_block_3_url}}" class="footer-section-item">{{settings.custom_block_3_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_4_toggle}}
+        <a href="{{settings.custom_block_4_url}}" class="footer-section-item">{{settings.custom_block_4_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_5_toggle}}
+        <a href="{{settings.custom_block_5_url}}" class="footer-section-item">{{settings.custom_block_5_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_6_toggle}}
+        <a href="{{settings.custom_block_6_url}}" class="footer-section-item">{{settings.custom_block_6_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_7_toggle}}
+        <a href="{{settings.custom_block_7_url}}" class="footer-section-item">{{settings.custom_block_7_title}}</a>
+      {{/if}}
+      {{#if settings.custom_block_8_toggle}}
+        <a href="{{settings.custom_block_8_url}}" class="footer-section-item">{{settings.custom_block_8_title}}</a>
+      {{/if}}
+    </div>
+  </div>
+  <div class="footer-section">
+    <h4 class="footer-section-header">Support</h4>
+    <div class="footer-section-items">
+      <a href="{{settings.header_url_link_1}}" class="footer-section-item">{{settings.header_url_title_1}}</a>
+      <a class="footer-section-item" href="{{settings.header_url_link_2}}">{{settings.header_url_title_2}}</a>
+      <a class="footer-section-item" href="{{settings.header_url_link_3}}">{{settings.header_url_title_3}}</a>
+      <a class="footer-section-item" href="{{settings.header_url_link_4}}">{{settings.header_url_title_4}}</a>
+      <a class="footer-section-item" href="{{settings.header_url_link_6}}">{{settings.header_url_title_6}}</a>
+      {{#if settings.video_block_1}}
+        <a target="_blank" class="footer-section-item" href="{{settings.video_block_1_id}}">Helpful videos</a>
+      {{/if}}
+    </div>
+  </div>
+  <div class="footer-section">
+    <h4 class="footer-section-header">Policies</h4>
+    <div class="footer-section-items">
+      {{#is settings.footer_url_link_1 ''}}
+      {{else}}
+        <a target="_blank" href="{{settings.footer_url_link_1}}" class="footer-section-item">
+          {{#if settings.dc_toggle}}
+            {{dc 'footer_url_title_1'}}
+          {{else}}
+            {{settings.footer_url_title_1}}
+          {{/if}}
+        </a>
+      {{/is}}
+      {{#is settings.footer_url_link_2 ''}}
+      {{else}}
+        <a target="_blank" href="{{settings.footer_url_link_2}}" class="footer-section-item">
+          {{#if settings.dc_toggle}}
+            {{dc 'footer_url_title_2'}}
+          {{else}}
+            {{settings.footer_url_title_2}}
+          {{/if}}
+        </a>
+      {{/is}}
+      {{#is settings.footer_url_link_3 ''}}
+      {{else}}
+        <a target="_blank" href="{{settings.footer_url_link_3}}" class="footer-section-item">
+          {{#if settings.dc_toggle}}
+            {{dc 'footer_url_title_3'}}
+          {{else}}
+            {{settings.footer_url_title_3}}
+          {{/if}}
+        </a>
+      {{/is}}
+      {{#is settings.footer_url_link_4 ''}}
+      {{else}}
+        <a target="_blank" href="{{settings.footer_url_link_4}}" class="footer-section-item">
+          {{#if settings.dc_toggle}}
+            {{dc 'footer_url_title_4'}}
+          {{else}}
+            {{settings.footer_url_title_4}}
+          {{/if}}
+        </a>
+      {{/is}}
+      <a href="{{settings.header_url_link_5}}" class="footer-section-item">{{settings.header_url_title_5}}</a>
+    </div>
   </div>
 </footer>
 

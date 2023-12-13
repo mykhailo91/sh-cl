@@ -10,6 +10,21 @@
   $('.header-panel > a, .hc-name a').css({"color" : "{{settings.hero_title_color}}"})
   $('.searchbar-top').css({'display' : 'none'})
 </script>
+
+<!-- Modal HTML embedded directly into document -->
+<div id="ex1" class="modal" tabindex="-1" role="dialog">
+ <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <iframe width="100%" frameborder="0" seamless src="https://www.zingtree.com/live/367216951/embed">
+        </iframe>
+      </div>
+  </div>
+</div>
+
 <!--Hero component start -->
 <div class="hero-item-wrapper">
     <div class="hero-item">
@@ -35,56 +50,56 @@
 <div class="homepage-container light-bg">
       <div class="container-wrapper content-container">
         <!--General Topics component start -->
-        <div class="general-topics">
-            <a class="general-topic"
-               href="https://support.sharkclean.com/hc/en-us/articles/4401983044764-Order-Status">
-                <img class="general-topic__icon" src="{{asset 'general-topic_1_icon.png'}}" alt="order status & delivery">
-                <div class="general-topic__info">
-                    <h4>Order status / Delivery</h4>
-                    <span class="general-topic__action">
+          <div class="general-topics">
+              <a class="general-topic"
+                 href="https://support.sharkclean.com/hc/en-us/articles/4401983044764-Order-Status">
+                  <img class="general-topic__icon" src="{{asset 'general-topic_1_icon.png'}}" alt="order status & delivery">
+                  <div class="general-topic__info">
+                      <h4>Order status / Delivery</h4>
+                      <span class="general-topic__action">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M16.2673 19.7924C15.9674 20.0781 15.4926 20.0666 15.2069 19.7666C14.9213 19.4667 14.9328 18.992 15.2327 18.7063L21.4841 12.7517L0.75 12.7517C0.335787 12.7517 0 12.4159 0 12.0017C0 11.5875 0.335787 11.2517 0.75 11.2517L21.4842 11.2517L15.2327 5.29697C14.9328 5.01129 14.9213 4.53655 15.2069 4.23663C15.4926 3.9367 15.9674 3.92516 16.2673 4.21084L23.6862 11.2775C23.8551 11.4385 23.9551 11.6437 23.9861 11.8571C23.9952 11.9039 24 11.9522 24 12.0017C24 12.0512 23.9952 12.0997 23.986 12.1466C23.955 12.3598 23.855 12.5649 23.6862 12.7257L16.2673 19.7924Z" fill="#6610F2"/>
+  <path d="M1.5 12H22.5M22.5 12L15.75 5.25M22.5 12L15.75 18.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                             </span>
-                </div>
-            </a>
-            <a class="general-topic"
-               href="https://support.sharkclean.com/hc/en-us/categories/4402873078290-Warranty-Returns">
-                <img class="general-topic__icon" src="{{asset 'general-topic_2_icon.png'}}" alt=" warranty & returns">
-                <div class="general-topic__info">
-                    <h4>Warranty & Returns</h4>
-                    <span class="general-topic__action">
+                  </div>
+              </a>
+              <a class="general-topic"
+                 href="https://support.sharkclean.com/hc/en-us/categories/4402873078290-Warranty-Returns">
+                  <img class="general-topic__icon" src="{{asset 'general-topic_2_icon.png'}}" alt=" warranty & returns">
+                  <div class="general-topic__info">
+                      <h4>Warranty & Returns</h4>
+                      <span class="general-topic__action">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M16.2673 19.7924C15.9674 20.0781 15.4926 20.0666 15.2069 19.7666C14.9213 19.4667 14.9328 18.992 15.2327 18.7063L21.4841 12.7517L0.75 12.7517C0.335787 12.7517 0 12.4159 0 12.0017C0 11.5875 0.335787 11.2517 0.75 11.2517L21.4842 11.2517L15.2327 5.29697C14.9328 5.01129 14.9213 4.53655 15.2069 4.23663C15.4926 3.9367 15.9674 3.92516 16.2673 4.21084L23.6862 11.2775C23.8551 11.4385 23.9551 11.6437 23.9861 11.8571C23.9952 11.9039 24 11.9522 24 12.0017C24 12.0512 23.9952 12.0997 23.986 12.1466C23.955 12.3598 23.855 12.5649 23.6862 12.7257L16.2673 19.7924Z" fill="#6610F2"/>
+  <path d="M1.5 12H22.5M22.5 12L15.75 5.25M22.5 12L15.75 18.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                             </span>
-                </div>
-            </a>
-            <a class="general-topic"
-               href="https://support.sharkclean.com/hc/en-us/categories/4402873069074-Troubleshooting">
-                <img class="general-topic__icon" src="{{asset 'general-topic_3_icon.png'}}" alt="find parts & accessories">
-                <div class="general-topic__info">
-                    <h4>Find Parts & Accessories</h4>
-                    <span class="general-topic__action">
+                  </div>
+              </a>
+              <a class="general-topic"
+                 href="https://support.sharkclean.com/hc/en-us/categories/4402873069074-Troubleshooting">
+                  <img class="general-topic__icon" src="{{asset 'general-topic_3_icon.png'}}" alt="find parts & accessories">
+                  <div class="general-topic__info">
+                      <h4>Find Parts & Accessories</h4>
+                      <span class="general-topic__action">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M16.2673 19.7924C15.9674 20.0781 15.4926 20.0666 15.2069 19.7666C14.9213 19.4667 14.9328 18.992 15.2327 18.7063L21.4841 12.7517L0.75 12.7517C0.335787 12.7517 0 12.4159 0 12.0017C0 11.5875 0.335787 11.2517 0.75 11.2517L21.4842 11.2517L15.2327 5.29697C14.9328 5.01129 14.9213 4.53655 15.2069 4.23663C15.4926 3.9367 15.9674 3.92516 16.2673 4.21084L23.6862 11.2775C23.8551 11.4385 23.9551 11.6437 23.9861 11.8571C23.9952 11.9039 24 11.9522 24 12.0017C24 12.0512 23.9952 12.0997 23.986 12.1466C23.955 12.3598 23.855 12.5649 23.6862 12.7257L16.2673 19.7924Z" fill="#6610F2"/>
+  <path d="M1.5 12H22.5M22.5 12L15.75 5.25M22.5 12L15.75 18.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                             </span>
-                </div>
-            </a>
-            <a class="general-topic"
-               href="#">
-                <img class="general-topic__icon" src="{{asset 'general-topic_4_icon.png'}}" alt="find parts & accessories">
-                <div class="general-topic__info">
-                    <h4>Recipes</h4>
-                    <span class="general-topic__action">
+                  </div>
+              </a>
+              <a class="general-topic"
+                 href="#" style="display: none">
+                  <img class="general-topic__icon" src="{{asset 'general-topic_4_icon.png'}}" alt="find parts & accessories">
+                  <div class="general-topic__info">
+                      <h4>Recipes</h4>
+                      <span class="general-topic__action">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M16.2673 19.7924C15.9674 20.0781 15.4926 20.0666 15.2069 19.7666C14.9213 19.4667 14.9328 18.992 15.2327 18.7063L21.4841 12.7517L0.75 12.7517C0.335787 12.7517 0 12.4159 0 12.0017C0 11.5875 0.335787 11.2517 0.75 11.2517L21.4842 11.2517L15.2327 5.29697C14.9328 5.01129 14.9213 4.53655 15.2069 4.23663C15.4926 3.9367 15.9674 3.92516 16.2673 4.21084L23.6862 11.2775C23.8551 11.4385 23.9551 11.6437 23.9861 11.8571C23.9952 11.9039 24 11.9522 24 12.0017C24 12.0512 23.9952 12.0997 23.986 12.1466C23.955 12.3598 23.855 12.5649 23.6862 12.7257L16.2673 19.7924Z" fill="#6610F2"/>
+  <path d="M1.5 12H22.5M22.5 12L15.75 5.25M22.5 12L15.75 18.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                             </span>
-                </div>
-            </a>
-        </div>
+                  </div>
+              </a>
+          </div>
         <!--General Topics component end -->
     </div>
 
@@ -298,156 +313,174 @@
     </a>
   </div>
 
-  <div class="content-container container-wrapper">
-    {{#if settings.show_categories_toggle}}
-    <section class="content-base content-category">
-      <h3 class="content-header">{{t'categories'}}</h3>
-      <div id="content-parent" class="content-wrapper">
-        <div id="left-col">
-        {{#each categories}}
-          {{#isnt name 'Product Information & FAQs'}}
-          {{#isnt name 'Troubleshooting'}}
-          {{#isnt name 'Order Status'}}
-          {{#isnt name 'Warranty & Returns'}}
-          {{#isnt name 'Contact Us'}}
-          {{#isnt name 'Order Status / Delivery'}}
+  {{#if settings.show_categories_toggle}}
+    <div class="content-container container-wrapper">
+      <section class="content-base content-category">
+        <h3 class="content-header">{{t'categories'}}</h3>
+        <div id="content-parent" class="content-wrapper">
+          <div id="left-col">
+          {{#each categories}}
+            {{#isnt name 'Product Information & FAQs'}}
+            {{#isnt name 'Troubleshooting'}}
+            {{#isnt name 'Order Status'}}
+            {{#isnt name 'Warranty & Returns'}}
+            {{#isnt name 'Contact Us'}}
+            {{#isnt name 'Order Status / Delivery'}}
 
-          {{#if ../has_multiple_categories}}
-          <div class="content-block" data-category="{{name}}">
-            <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
-              <div class="content-link-title">{{name}}</div>
-              <i class="fa"></i>
-            </a>
-            <div id="{{name}}" class="content-section collapse">
-              <p class="content-link-description">{{description}}</p>
-              <ul class="content-list">
-                {{#each sections}}
-                <li><a href="{{url}}">{{name}}</a></li>
-                {{/each}}
-                {{#if more_sections}}
-                <a href="{{url}}" class="all-article">
-                  {{t 'see_all_sections'}}
-                </a>
-                {{/if}}
-              </ul>
+            {{#if ../has_multiple_categories}}
+            <div class="content-block" data-category="{{name}}">
+              <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
+                <div class="content-link-title">{{name}}</div>
+                <i class="fa"></i>
+              </a>
+              <div id="{{name}}" class="content-section collapse">
+                <p class="content-link-description">{{description}}</p>
+                <ul class="content-list">
+                  {{#each sections}}
+                  <li><a href="{{url}}">{{name}}</a></li>
+                  {{/each}}
+                  {{#if more_sections}}
+                  <a href="{{url}}" class="all-article">
+                    {{t 'see_all_sections'}}
+                  </a>
+                  {{/if}}
+                </ul>
+              </div>
             </div>
-          </div>
-          {{else}}
-          {{#each sections}}
-          <div class="content-block">
-            <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
-              <div class="content-link-title">{{name}}</div>
-              <i class="fa"></i>
-            </a>
-            <div id="{{name}}" class="content-section collapse">
-              <p class="content-link-description">{{description}}</p>
-              <ul class="content-list">
-                {{#each articles}}
-                <li><a href="{{url}}">{{title}}</a></li>
-                {{/each}}
-                {{#if more_articles}}
-                <a href="{{url}}" class="all-article">
-                  {{t 'show_all_articles' count=article_count}}
-                </a>
-                {{/if}}
-              </ul>
-            </div>
-          </div>
-          {{/each}}
-          {{/if}}
-          {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
-        {{/each}}
-        </div>
-        <div id="right-col">
-        {{#each categories}}
-          {{#isnt name 'Product Information & FAQs'}}
-          {{#isnt name 'Troubleshooting'}}
-          {{#isnt name 'Order Status'}}
-          {{#isnt name 'Warranty & Returns'}}
-          {{#isnt name 'Contact Us'}}
-          {{#isnt name 'Order Status / Delivery'}}
-
-          {{#if ../has_multiple_categories}}
-          <div class="content-block" data-category="{{name}}">
-            <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
-              <div class="content-link-title">{{name}}</div>
-              <i class="fa"></i>
-            </a>
-            <div id="{{name}}" class="content-section collapse">
-              <p class="content-link-description">{{description}}</p>
-              <ul class="content-list">
-                {{#each sections}}
-                <li><a href="{{url}}">{{name}}</a></li>
-                {{/each}}
-                {{#if more_sections}}
-                <a href="{{url}}" class="all-article">
-                  {{t 'see_all_sections'}}
-                </a>
-                {{/if}}
-              </ul>
-            </div>
-          </div>
-          {{else}}
-          {{#each sections}}
-          <div class="content-block">
-            <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
-              <div class="content-link-title">{{name}}</div>
-              <i class="fa"></i>
-            </a>
-            <div id="{{name}}" class="content-section collapse">
-              <p class="content-link-description">{{description}}</p>
-              <ul class="content-list">
-                {{#each articles}}
-                <li><a href="{{url}}">{{title}}</a></li>
-                {{/each}}
-                {{#if more_articles}}
-                <a href="{{url}}" class="all-article">
-                  {{t 'show_all_articles' count=article_count}}
-                </a>
-                {{/if}}
-              </ul>
-            </div>
-          </div>
-          {{/each}}
-          {{/if}}
-
-          {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
-        {{/each}}
-        </div>
-      </div>
-    </section>
-    {{/if}}
-
-    {{#if settings.videos_toggle}}
-    <div class="site-video">
-      <h3 class="content-header">
-        {{#if settings.dc_toggle}}
-        {{dc 'video_section_title'}}
-        {{else}}
-        {{settings.video_section_title}}
-        {{/if}}
-      </h3>
-      <span data-action="slideLeft" class="button-carousel">&#139;</span>
-      <span data-action="slideRight" class="button-carousel">&#155;</span>
-      <div class="site-video-items" id="carousel">
-        {{#if settings.video_block_1}}
-        <a {{#is settings.video_block_1_list 'Other'}}target="_blank" href="{{#if settings.dc_toggle}}{{dc'video_block_1_id'}}{{else}}{{settings.video_block_1_id}}{{/if}}"{{/is}} class="site-video-item carousel-item" {{#is settings.video_block_1_list 'Embed Video'}}data-src="{{settings.video_block_1_id}}" data-toggle="modal" data-target="#video-modal"{{/is}}>
-          <div class="site-video-img{{#if settings.show_play_button_1}} site-video-icon{{/if}}" style="background-image: url({{settings.video_block_1_img}});">
-
-          </div>
-          <div class="site-video-title">
-            {{#if settings.dc_toggle}}
-            {{dc'video_block_1_title'}}
             {{else}}
-            {{settings.video_block_1_title}}
+            {{#each sections}}
+            <div class="content-block">
+              <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
+                <div class="content-link-title">{{name}}</div>
+                <i class="fa"></i>
+              </a>
+              <div id="{{name}}" class="content-section collapse">
+                <p class="content-link-description">{{description}}</p>
+                <ul class="content-list">
+                  {{#each articles}}
+                  <li><a href="{{url}}">{{title}}</a></li>
+                  {{/each}}
+                  {{#if more_articles}}
+                  <a href="{{url}}" class="all-article">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                  {{/if}}
+                </ul>
+              </div>
+            </div>
+            {{/each}}
+            {{/if}}
+            {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
+          {{/each}}
+          </div>
+          <div id="right-col">
+          {{#each categories}}
+            {{#isnt name 'Product Information & FAQs'}}
+            {{#isnt name 'Troubleshooting'}}
+            {{#isnt name 'Order Status'}}
+            {{#isnt name 'Warranty & Returns'}}
+            {{#isnt name 'Contact Us'}}
+            {{#isnt name 'Order Status / Delivery'}}
+
+            {{#if ../has_multiple_categories}}
+            <div class="content-block" data-category="{{name}}">
+              <a data-parent="#accordion" data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false" aria-controls="#{{name}}">
+                <div class="content-link-title">{{name}}</div>
+                <i class="fa"></i>
+              </a>
+              <div id="{{name}}" class="content-section collapse">
+                <p class="content-link-description">{{description}}</p>
+                <ul class="content-list">
+                  {{#each sections}}
+                  <li><a href="{{url}}">{{name}}</a></li>
+                  {{/each}}
+                  {{#if more_sections}}
+                  <a href="{{url}}" class="all-article">
+                    {{t 'see_all_sections'}}
+                  </a>
+                  {{/if}}
+                </ul>
+              </div>
+            </div>
+            {{else}}
+            {{#each sections}}
+            <div class="content-block">
+              <a data-toggle="collapse" data-target="#{{name}}" class="content-link" aria-expanded="false">
+                <div class="content-link-title">{{name}}</div>
+                <i class="fa"></i>
+              </a>
+              <div id="{{name}}" class="content-section collapse">
+                <p class="content-link-description">{{description}}</p>
+                <ul class="content-list">
+                  {{#each articles}}
+                  <li><a href="{{url}}">{{title}}</a></li>
+                  {{/each}}
+                  {{#if more_articles}}
+                  <a href="{{url}}" class="all-article">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                  {{/if}}
+                </ul>
+              </div>
+            </div>
+            {{/each}}
+            {{/if}}
+
+            {{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}{{/isnt}}
+          {{/each}}
+          </div>
+        </div>
+      </section>
+    </div>
+  {{/if}}
+
+
+    {{!-- Support Videos Section --}}
+    {{#if settings.videos_toggle}}
+      <div class="video-section-container">
+        <img class="video-section-bg-image" src="{{asset 'support-videos-image.png'}}" alt="video-bg"/>
+        <div class="img-gradient"></div>
+        <div class="video-section">
+          <div class="video-section-header">
+            <h2 class="section-title">Watch Shark Support Videos</h2>
+            {{#if settings.video_block_1}}
+              <a href="{{#if settings.dc_toggle}}
+                          {{dc'video_block_1_id'}}
+                        {{else}}
+                          {{settings.video_block_1_id}}
+                        {{/if}}"
+                  class="styled-button see-all-button"
+                  target="_blank"
+                >
+                <img class="styled-button-icon" src="{{asset 'youtube-sm.svg'}}" alt="youtube-icon" />
+                {{#if settings.dc_toggle}}
+                  {{dc'video_block_1_title'}}
+                {{else}}
+                  {{settings.video_block_1_title}}
+                {{/if}}
+              </a>
             {{/if}}
           </div>
-        </a>
-        {{/if}}
+          <div class="video-section-body">
+            <span data-action="slideLeft" class="button-carousel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 4.5L7.5 12L15 19.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span data-action="slideRight" class="button-carousel button-right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 4.5L16.5 12L9 19.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+            <div class="site-video-items" id="carousel">
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     {{/if}}
 
+  <div class="content-container container-wrapper">
     {{!-- Most Popular Section --}}
     {{#if promoted_articles}}
       <section class="section-container">
@@ -462,7 +495,7 @@
                 <a class="article-name" href="{{url}}">{{title}}</a>
               </div>
             </div>
-        {{/each}}
+          {{/each}}
         </ul>
       </section>
     {{/if}}
@@ -480,42 +513,42 @@
           <div class="articles subtitle1 semi-bold">
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">Shark Refurbished Units - FAQs</span>
+              <a href="#ex1" data-modal class="article-name">Shark Refurbished Units - FAQs</a>
             </div>
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">Carpet Cleaners | How to Deep Clean and Stain Clean (Shark® CarpetXp, Text)</span>
+              <span class="article-name" onclick="show_popup('367216951','');">Carpet Cleaners | How to Deep Clean and Stain Clean (Shark® CarpetXp, Text)</span>
             </div>
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">Instalment (pay monthly) FAQ's</span>
+              <span class="article-name" data-link="{{settings.faq_article_link_3}}">{{settings.faq_article_title_3}}</span>
             </div>
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">Where can I purchase additional batteries for my cordless vacuum?</span>
+              <span class="article-name" data-link="{{settings.faq_article_link_4}}">{{settings.faq_article_title_4}}</span>
             </div>
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">What makes our products so good at tackling pet hair?</span>
+              <span class="article-name" data-link="{{settings.faq_article_link_5}}">{{settings.faq_article_title_5}}</span>
             </div>
             <div class="article">
               <img class="article-icon" src="{{asset 'question-icon.svg'}}" alt="question-icon" />
-              <span class="article-name">Klarna Payment Consumer Information</span>
+              <span class="article-name" data-link="{{settings.faq_article_link_6}}">{{settings.faq_article_title_6}}</span>
             </div>
         </section>
 
         {{!-- Contact Us Banner --}}
-        <section class="section-container contact-section">
+        {{!-- <section class="section-container contact-section">
           <div class="contact-banner">
             <h3 class="contact-title">Still have questions?</h3>
             <p class="contact-text subtitle1">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
-            <a class="contact-button body2" href="{{settings.header_url_link_5}}">
-              <img class="contact-button-icon" src="{{asset 'envelope.svg'}}" alt="envelope-icon" />
+            <a class="styled-button body2" href="{{settings.header_url_link_5}}">
+              <img class="styled-button-icon" src="{{asset 'envelope.svg'}}" alt="envelope-icon" />
               Get in Touch
             </a>
             <img class="contact-bg-icon" src="{{asset 'chats-teardrop.svg'}}" alt="bg-icon" />
           </div>
-        </section>
+        </section> --}}
       {{/if}}
 
       {{#if settings.show_recent_activity_toggle}}
@@ -527,21 +560,6 @@
   </div>
 </div>
 
-{{!-- General FAQ Modal --}}
-<div id="faq-modal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <iframe width="100%" frameborder="0" seamless src="https://www.zingtree.com/live/984790786/embed">
-        </iframe>
-      </div>
-  </div>
-  </div>
-</div>
 
 {{!-- Video Modal --}}
 <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="site-video-modal" aria-hidden="true">
@@ -575,6 +593,7 @@
     </div>
   </a>
 </template>
+
 <script>
 
 {{#if settings.videos_toggle}}
@@ -652,24 +671,26 @@ $(document).ready(function() {
 
 <script type="text/javascript" src="https://www.zingtree.com/js/iframeResizerSmart.js"></script>
 <script type="text/javascript">iFrameResize();</script>
+
+
 <script>
-  let faqModal = $("#faq-modal");
-  let faqArticles = $("#faq-section .article-name");
-  let faqModalClose = $('.modal-header .modal-close');
+    let faqModal = $("#ex1");
+    let faqModalClose = $('.modal-header .modal-close');
 
-  faqArticles.on('click', function(e) {
+    $('a[data-modal]').click(function (event) {
+      $(this).modal({showClose: false});
+      return false;
+    });
 
-    $('body').css('overflow', 'hidden');
-    faqModal.css('display', 'block');
+    faqModalClose.on('click', function(e) {
+      $.modal.close();
+    });
 
-    $('.back-to-top.is-active').css('display', 'none');
-  });
-
-  faqModalClose.on('click', function(e) {
-    let topBtn = $('.back-to-top.is-active');
-    $('body').css('overflow', 'auto');
-    faqModal.css('display', 'none');
-
-    $('.back-to-top.is-active').css('display', 'block');
-  });
+    $('#ex1').on($.modal.BEFORE_CLOSE, function(event, modal) {
+      let y = modal.$anchor.offset().top - $("#site-header").height() - modal.$anchor.height();
+      window.scrollTo({top: y, x: 0, behavior: "smooth"})
+    });
 </script>
+
+{{!-- Zingtree modal --}}
+<script src="https://www.zingtree.com/deploy/popup-modal.js"></script>

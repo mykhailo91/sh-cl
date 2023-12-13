@@ -2,9 +2,40 @@ footer {
   padding: 64px;
   background-color: #000;
   color: #fff;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
   @media screen and (max-width: 768px) {
-    padding: 24px;
+    padding: 24px 16px;
+    gap: 24px;
+
+    .social-section {
+      grid-column: 1/-1;
+      grid-row: 4;
+    }
+  }
+
+  .footer-section-header {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.45px;
+    color: #767676;
+    margin-bottom: 16px;
+  }
+
+  .footer-section-item {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   .logo {
@@ -31,9 +62,16 @@ footer {
     display: flex;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 768px) {
       gap: 20px;
+    }
+  }
+
+  .social-link {
+    img {
+      min-width: 24px;
     }
   }
 }
