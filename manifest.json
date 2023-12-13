@@ -1,7 +1,7 @@
 {
   "name": "Shark US - 20231123 (New Robot Section)",
   "author": "Solafid Solutions",
-  "version": "2.2.8",
+  "version": "1.2.6",
   "api_version": 2,
   "settings": [
     {
@@ -853,276 +853,6 @@
       ]
     },
     {
-      "label": "Category / Section Banner 1",
-      "variables": [
-        {
-          "identifier": "category_name_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner 1 name",
-          "value": "Air Purifiers"
-        },
-        {
-          "identifier": "category_info_title_1_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 1",
-          "value": "Find Your Air Purifier Replacement Filters Here"
-        },
-        {
-          "identifier": "category_info_link_1_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 1",
-          "value": "https://www.sharkclean.com/parts-and-accessories/"
-        },
-        {
-          "identifier": "category_info_title_1_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_1_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_title_1_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 3",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_1_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 3",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "label": "Category / Section Banner 2",
-      "variables": [
-        {
-          "identifier": "category_name_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner 2 name",
-          "value": "Vacuums"
-        },
-        {
-          "identifier": "category_info_title_2_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 1",
-          "value": "PARTS & ACESSORIES | Here"
-        },
-        {
-          "identifier": "category_info_link_2_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 1",
-          "value": "https://www.sharkclean.com/parts-and-accessories/model-number/"
-        },
-        {
-          "identifier": "category_info_title_2_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 2",
-          "value": "REGISTER YOUR PRODUCT | Here "
-        },
-        {
-          "identifier": "category_info_link_2_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 2",
-          "value": "https://www.sharkclean.com/register/guarantee?_ga=2.234757719.89548476.1650075915-1108144034.1650075915"
-        },
-        {
-          "identifier": "category_info_title_2_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 3",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_2_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 3",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "label": "Category / Section Banner 3",
-      "variables": [
-        {
-          "identifier": "category_name_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner 3 name",
-          "value": "Hair Care"
-        },
-        {
-          "identifier": "category_info_title_3_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 1",
-          "value": "Find Styling Tips on Shark BEAUTY"
-        },
-        {
-          "identifier": "category_info_link_3_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 1",
-          "value": "https://www.sharkclean.com/shark-beauty/styling-tips?_ga=2.15716913.601253584.1668962874-1260388521.1668453308"
-        },
-        {
-          "identifier": "category_info_title_3_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_3_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_title_3_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 3",
-          "value": "FIND SHARK FLEXSTYLE & HYPERAIR ACCESSORIES |  Here"
-        },
-        {
-          "identifier": "category_info_link_3_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 3",
-          "value": "https://www.sharkclean.com/parts-and-accessories/find-model-number/"
-        }
-      ]
-    },
-    {
-      "label": "Category / Section Banner 4",
-      "variables": [
-        {
-          "identifier": "category_name_4",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner 4 name",
-          "value": "Robots"
-        },
-        {
-          "identifier": "category_info_title_4_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 4",
-          "value": "EVERYTHING YOU NEED TO KNOW ABOUT YOUR ROBOT APP |  Here"
-        },
-        {
-          "identifier": "category_info_link_4_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 1",
-          "value": "https://support.sharkclean.com/hc/en-us/sections/6715914447644-SharkClean-App"
-        },
-        {
-          "identifier": "category_info_title_4_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 2",
-          "value": "SETTING UP THE SHARKCLEAN APP | Here"
-        },
-        {
-          "identifier": "category_info_link_4_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 2",
-          "value": "https://support.sharkclean.com/hc/en-us/articles/6697662779420"
-        },
-        {
-          "identifier": "category_info_title_4_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 3",
-          "value": "SHARKNINJA  WEBSITES VS. FAKE WEBSITES- Details Here"
-        },
-        {
-          "identifier": "category_info_link_4_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 3",
-          "value": "https://support.sharkclean.com/hc/en-us/articles/10996216788124"
-        }
-      ]
-    },
-    {
-      "label": "Category / Section Banner 5",
-      "variables": [
-        {
-          "identifier": "category_name_5",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner 1 name",
-          "value": "Carpet Cleaners"
-        },
-        {
-          "identifier": "category_info_title_5_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 1",
-          "value": "Shark® CarpetXpert™ How-To Videos | HERE"
-        },
-        {
-          "identifier": "category_info_link_5_1",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 1",
-          "value": "https://support.sharkclean.com/hc/en-us/sections/9955258254748-Carpet-Cleaners"
-        },
-        {
-          "identifier": "category_info_title_5_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_5_2",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 2",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_title_5_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner title 3",
-          "value": ""
-        },
-        {
-          "identifier": "category_info_link_5_3",
-          "type": "text",
-          "description": " ",
-          "label": "Category / section banner link 3",
-          "value": ""
-        }
-      ]
-    },
-    {
       "label": "Custom Blocks Icons",
       "variables": [
         {
@@ -1147,6 +877,262 @@
           "description": "Color of custom block border",
           "label": "Border color",
           "value": "rgba(0, 0, 0, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 1",
+      "variables": [
+        {
+          "identifier": "custom_block_1_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_1_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_1_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Air Purifiers"
+        },
+        {
+          "identifier": "custom_block_1_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410562747548"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 2",
+      "variables": [
+        {
+          "identifier": "custom_block_2_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_2_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_2_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Hair Care"
+        },
+        {
+          "identifier": "custom_block_2_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410572522908"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 3",
+      "variables": [
+        {
+          "identifier": "custom_block_3_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_3_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_3_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Hard Floor Cleaning & Irons"
+        },
+        {
+          "identifier": "custom_block_3_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410572522908"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 4",
+      "variables": [
+        {
+          "identifier": "custom_block_4_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_4_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_4_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Carpet Cleaners"
+        },
+        {
+          "identifier": "custom_block_4_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410561534748"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 5",
+      "variables": [
+        {
+          "identifier": "custom_block_5_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_5_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_5_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Vacuums"
+        },
+        {
+          "identifier": "custom_block_5_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/articles/4401983044764-Order-Status"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 6",
+      "variables": [
+        {
+          "identifier": "custom_block_6_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": true
+        },
+        {
+          "identifier": "custom_block_6_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_6_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": "Robots"
+        },
+        {
+          "identifier": "custom_block_6_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": "https://sharkninja1680053744.zendesk.com/hc/en-gb/sections/11410573383452"
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 7",
+      "variables": [
+        {
+          "identifier": "custom_block_7_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": false
+        },
+        {
+          "identifier": "custom_block_7_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_7_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "identifier": "custom_block_7_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Custom Block 8",
+      "variables": [
+        {
+          "identifier": "custom_block_8_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the custom block",
+          "label": "Show Custom Block",
+          "value": false
+        },
+        {
+          "identifier": "custom_block_8_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 192x192px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "custom_block_8_title",
+          "type": "text",
+          "description": "Custom block title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "identifier": "custom_block_8_url",
+          "type": "text",
+          "description": "Custom block url",
+          "label": "URL",
+          "value": ""
         }
       ]
     },
