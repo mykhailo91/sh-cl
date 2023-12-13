@@ -725,6 +725,134 @@
       ]
     },
     {
+      "label": "General Topic 1",
+      "variables": [
+        {
+          "identifier": "general-topic_1_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the topic block",
+          "label": "Show General Topic",
+          "value": true
+        },
+        {
+          "identifier": "general-topic_1_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 32x32px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "general-topic_1_title",
+          "type": "text",
+          "description": "General Topic title",
+          "label": "Title",
+          "value": "Order status / Delivery"
+        },
+        {
+          "identifier": "general-topic_1_url",
+          "type": "text",
+          "description": "General Topic url",
+          "label": "URL",
+          "value": "https://support.sharkclean.com/hc/en-us/articles/4401983044764-Order-Status"
+        }
+      ]
+    },
+    {
+      "label": "General Topic 2",
+      "variables": [
+        {
+          "identifier": "general-topic_2_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the topic block",
+          "label": "Show General Topic",
+          "value": true
+        },
+        {
+          "identifier": "general-topic_2_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 32x32px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "general-topic_2_title",
+          "type": "text",
+          "description": "General Topic title",
+          "label": "Title",
+          "value": "Warranty & Returns"
+        },
+        {
+          "identifier": "general-topic_2_url",
+          "type": "text",
+          "description": "General Topic url",
+          "label": "URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "General Topic 3",
+      "variables": [
+        {
+          "identifier": "general-topic_3_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the topic block",
+          "label": "Show General Topic",
+          "value": true
+        },
+        {
+          "identifier": "general-topic_3_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 32x32px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "general-topic_3_title",
+          "type": "text",
+          "description": "General Topic title",
+          "label": "Title",
+          "value": "Find Parts & Accessories"
+        },
+        {
+          "identifier": "general-topic_3_url",
+          "type": "text",
+          "description": "General Topic url",
+          "label": "URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "General Topic 4",
+      "variables": [
+        {
+          "identifier": "general-topic_4_toggle",
+          "type": "checkbox",
+          "description": "Show or hide the topic block",
+          "label": "Show General Topic",
+          "value": true
+        },
+        {
+          "identifier": "general-topic_4_icon",
+          "type": "file",
+          "description": "The recommended dimensions: 32x32px",
+          "label": "Icon"
+        },
+        {
+          "identifier": "general-topic_4_title",
+          "type": "text",
+          "description": "General Topic title",
+          "label": "Title",
+          "value": "Recipes"
+        },
+        {
+          "identifier": "general-topic_4_url",
+          "type": "text",
+          "description": "General Topic url",
+          "label": "URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
       "label": "Category / Section Banner 1",
       "variables": [
         {
